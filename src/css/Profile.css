@@ -1,0 +1,147 @@
+/* Contenedor principal del perfil */
+.profile-container {
+  background-image: url('/src/assets/images/profile.gif');
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 50px 20px;
+  width: 100vw; /* Ancho completo */
+  min-height: 60vh; /* Altura mínima para pantallas grandes */
+  box-sizing: border-box; /* Evita desplazamientos por el padding */
+  overflow: hidden; /* Previene desbordamiento horizontal */
+}
+
+/* Contenido del perfil */
+.profile-content {
+  max-width: 800px;
+  width: 100%; /* Hace que el contenido se ajuste al ancho */
+}
+
+/* Título del perfil */
+.profile-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #08e2ff, #7873f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Subtítulo del perfil */
+.profile-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Enlaces del perfil */
+.profile-links {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Permite que los botones se acomoden en varias líneas si es necesario */
+}
+
+/* Botón genérico */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Botón de LinkedIn */
+.btn-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077b5; /* Color de fondo de LinkedIn */
+  border-color: #0077b5; /* Color del borde */
+  color: white; /* Color del texto */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.btn-linkedin img {
+  width: 20px; /* Tamaño de la imagen */
+  height: 20px;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.btn-linkedin:hover {
+  background-color: #005582; /* Cambio de color al pasar el ratón */
+  color: #fff;
+}
+
+/* Botón de contacto */
+.btn-contact {
+  background-color: transparent;
+  font-weight: normal;
+}
+
+/* Responsividad: Pantallas móviles */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 30px 15px; /* Reduce el padding para pantallas pequeñas */
+    min-height: 80vh; /* Ajusta la altura mínima */
+  }
+
+  .profile-title {
+    font-size: 2rem; /* Reduce el tamaño del título */
+  }
+
+  .profile-subtitle {
+    font-size: 1rem; /* Ajusta el tamaño del subtítulo */
+  }
+
+  .profile-links {
+    gap: 10px; /* Reduce el espacio entre botones */
+  }
+
+  .btn {
+    padding: 8px 15px; /* Ajusta el tamaño del botón */
+    font-size: 0.9rem; /* Reduce el tamaño de fuente */
+  }
+
+  .btn-linkedin {
+    font-size: 0.9rem; /* Ajusta el tamaño del botón de LinkedIn */
+    padding: 8px 15px;
+  }
+
+  .btn-linkedin img {
+    width: 18px; /* Reduce el tamaño del icono */
+    height: 18px;
+  }
+}

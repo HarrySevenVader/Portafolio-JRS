@@ -1,0 +1,206 @@
+/* Contenedor principal */
+.aboutme-container {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  display: flex; /* Flex para alinear elementos en fila */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  align-items: center; /* Alinea verticalmente */
+  justify-content: center; /* Alinea horizontalmente al centro en móviles */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Evita desbordamientos */
+  gap: 20px; /* Espacio entre los elementos */
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+/* Estilo de la imagen */
+.profile-picture {
+  width: 350px; /* Tamaño original */
+  height: 350px; /* Tamaño original */
+  border-radius: 10%; /* Bordes redondeados */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Sombra intensa */
+}
+
+/* Contenedor del texto */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px; /* Espacio entre el título y el párrafo */
+  padding-left: 0; /* Elimina padding en móviles */
+  max-width: 600px; /* Limita el ancho del texto */
+  text-align: center; /* Centra el texto en móviles */
+}
+
+/* Estilo del título */
+.text-container h2 {
+  font-family: 'Bree Serif', serif;
+  font-size: 1.8rem; /* Reduce el tamaño del título en móviles */
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #68a7ff;
+  text-decoration-thickness: 4px;
+  color: #d5d5d6;
+  margin: 0; /* Elimina márgenes extra */
+}
+
+/* Estilo del párrafo */
+.text-container p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 1.6; /* Ajusta altura de línea para legibilidad */
+  text-align: justify; /* Justifica el texto */
+  color: #fff;
+}
+
+/* Subtítulos */
+.text-container h3 {
+  font-family: 'Bree Serif', serif;
+  font-size: 1.3rem; /* Reduce ligeramente el tamaño en móviles */
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Boton descarga de CV */
+/*
+.download-cv-button {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid #68a7ff;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.download-cv-button:hover {
+  background-color: #68a7ff;
+  color: #000;
+  transform: scale(1.05);
+} */
+
+
+/* Nuevo Boton de descarga de CV */
+
+.download-cv-button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.download-cv-button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.download-cv-button::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.download-cv-button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+/* Responsividad: Pantallas medianas */
+@media (max-width: 1024px) {
+  .aboutme-container {
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Reduce el espacio entre los elementos */
+    padding: 20px; /* Ajusta el padding */
+  }
+
+  .profile-picture {
+    width: 300px; /* Tamaño reducido */
+    height: 300px; /* Tamaño reducido */
+  }
+
+  .text-container {
+    padding-left: 0; /* Elimina el espacio a la izquierda */
+    text-align: center; /* Centra el texto */
+  }
+
+  .text-container h2 {
+    font-size: 1.6rem; /* Reduce el tamaño del título */
+  }
+
+  .text-container p {
+    font-size: 13px; /* Ajusta el tamaño del texto */
+  }
+
+  .text-container h3 {
+    font-size: 1.2rem; /* Ajusta el tamaño del subtítulo */
+  }
+}
+
+/* Responsividad: Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .aboutme-container {
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos */
+    gap: 10px; /* Reduce el espacio entre los elementos */
+  }
+
+  .profile-picture {
+    width: 300px; /* Tamaño más pequeño */
+    height: 300px; /* Tamaño más pequeño */
+  }
+
+  .text-container {
+    max-width: 100%; /* Usa el ancho completo */
+    padding-left: 0; /* Elimina el padding */
+    text-align: center; /* Centra el texto */
+  }
+
+  .text-container h2 {
+    font-size: 1.4rem; /* Reduce el tamaño del título */
+  }
+
+  .text-container p {
+    font-size: 12px; /* Tamaño reducido del texto */
+  }
+
+  .text-container h3 {
+    font-size: 1rem; /* Reduce el tamaño del subtítulo */
+  }
+}

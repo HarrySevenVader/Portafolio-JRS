@@ -1,0 +1,117 @@
+/* Footer general */
+.footer {
+  background: linear-gradient(45deg, #000000, #2d2323);
+  text-align: center; /* Centrado */
+  border-top: 1px solid white; /* Línea blanca superior */
+  padding: 20px 0; /* Espaciado interno */
+  border-top: 3px solid rgb(255, 255, 255); /* Borde blanco en la parte superior */
+}
+
+/* Título del footer */
+.footer-title {
+  font-family: 'Bree Serif', serif;
+  color: #d5d5d6;
+  text-transform: uppercase;
+  font-size: 2rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  margin-top: 10px; /* Reduce el espacio superior */
+  margin-bottom: 15px; /* Ajusta el espacio inferior */
+  text-align: center;
+}
+
+/* Información del footer */
+.footer-info {
+  display: flex; /* Flexbox para organizar */
+  justify-content: center; /* Centrado horizontal */
+  gap: 20px; /* Espacio entre elementos */
+  margin-bottom: 15px; /* Separación inferior */
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 25px; /* Altura de línea para legibilidad */
+  flex-wrap: wrap; /* Para que los elementos se envuelvan si no caben en una sola fila */
+}
+
+/* Social links */
+.footer-social {
+  display: flex; /* Flexbox para organizar */
+  justify-content: center; /* Centrado horizontal */
+  gap: 15px; /* Espacio entre enlaces */
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 25px; /* Altura de línea para legibilidad */
+  flex-wrap: wrap; /* Para que los elementos se envuelvan si no caben en una sola fila */
+}
+
+/* Estilos para los enlaces sociales */
+.footer-social a {
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 25px; /* Altura de línea para legibilidad */
+  transition: color 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.footer-social a:hover {
+  color: gray; /* Color al pasar el mouse */
+}
+
+/* Estilos para íconos PNG */
+.footer-info img,
+.footer-social img {
+  width: 20px; /* Ancho de los íconos */
+  height: 20px; /* Altura de los íconos */
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  vertical-align: middle; /* Alineación vertical */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem; /* Ajusta el padding para pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .footer-title {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+    margin-bottom: 10px; /* Ajustar margen inferior */
+  }
+
+  .footer-info,
+  .footer-social {
+    font-size: 12px; /* Reducir tamaño de texto */
+    flex-direction: row; /* Mantener los elementos en fila */
+    gap: 10px; /* Reducir el espacio entre elementos */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .footer-info img,
+  .footer-social img {
+    width: 18px; /* Reducir el tamaño de los íconos */
+    height: 18px; /* Reducir el tamaño de los íconos */
+  }
+}
+
+/* Estilos para pantallas extra pequeñas */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1rem; /* Ajusta el padding para pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+  }
+
+  .footer-title {
+    font-size: 1.2rem; /* Reducir más el tamaño del título */
+    margin-bottom: 10px; /* Ajustar margen inferior */
+  }
+
+  .footer-info,
+  .footer-social {
+    font-size: 10px; /* Reducir aún más el tamaño de texto */
+    flex-direction: row; /* Mantener los elementos en fila */
+    gap: 8px; /* Reducir el espacio entre elementos */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+  }
+
+  .footer-info img,
+  .footer-social img {
+    width: 16px; /* Reducir aún más el tamaño de los íconos */
+    height: 16px; /* Reducir aún más el tamaño de los íconos */
+  }
+}

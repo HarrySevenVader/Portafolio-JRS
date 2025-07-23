@@ -1,0 +1,230 @@
+/* Contenedor principal */
+.proyectos {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Título principal */
+.proyectos h2 {
+  font-family: 'Bree Serif', serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #68a7ff;
+  text-decoration-thickness: 5px;
+  color: #d5d5d6;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de tarjetas */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.proyecto-card {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2323 50%, #1a1a1a 100%);
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1.8rem;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.proyecto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(104, 167, 255, 0.2);
+  border-color: #68a7ff;
+}
+
+/* Título del proyecto */
+.proyecto-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  flex-shrink: 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+/* Lista de características */
+.proyecto-card ul {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  flex-grow: 1;
+}
+
+.proyecto-card ul li {
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.proyecto-card ul li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #68a7ff;
+  font-size: 0.8rem;
+  top: 0.1rem;
+}
+
+/* Descripción del proyecto (tecnologías) */
+.proyecto-card p {
+  font-size: 0.85rem;
+  color: #68a7ff;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.8rem;
+  background: rgba(104, 167, 255, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid #68a7ff;
+  flex-shrink: 0;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+/* Imagen del proyecto */
+.proyecto-imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  flex-shrink: 0;
+  border: 2px solid rgba(104, 167, 255, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-imagen {
+  border-color: rgba(104, 167, 255, 0.5);
+}
+
+/* Enlace de GitHub */
+.github-link {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(104, 167, 255, 0.1);
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  background: rgba(104, 167, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.github-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+  color: #68a7ff;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.github-link a:hover .github-icon {
+  transform: rotate(360deg);
+}
+
+/* Responsivo: Pantallas pequeñas */
+@media (max-width: 768px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr; /* Tarjetas en una sola columna */
+    gap: 1.5rem;
+  }
+
+  .proyecto-card {
+    max-width: 100%; /* Ajuste completo al ancho de la pantalla */
+    height: auto; /* Altura automática en móviles */
+    min-height: 500px; /* Altura mínima en móviles */
+  }
+
+  .proyecto-card ul {
+    max-height: none; /* Sin límite de altura en móviles */
+  }
+
+  .proyectos {
+    padding: 1.5rem; /* Reduce el padding general */
+  }
+
+  .proyectos h2 {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+  }
+}
+
+/* Responsivo: Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .proyecto-card {
+    padding: 1.2rem;
+  }
+
+  .proyecto-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .proyecto-card ul {
+    font-size: 0.9rem;
+  }
+
+  .proyecto-card ul li {
+    margin-bottom: 0.6rem;
+  }
+
+  .proyecto-card p {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+
+  .github-link {
+    bottom: 10px;
+    right: 10px;
+    padding: 6px;
+  }
+
+  .github-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

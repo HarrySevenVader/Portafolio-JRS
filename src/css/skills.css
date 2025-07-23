@@ -1,0 +1,86 @@
+/* Contenedor general */
+.skills {
+  text-align: center;
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 50px 20px; /* Espaciado interno */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+}
+
+/* Título del contenedor */
+.skills-title {
+  font-family: 'Bree Serif', serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #68a7ff;
+  text-decoration-thickness: 5px;
+  color: #d5d5d6;
+  font-size: 2rem; /* Tamaño del título */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Lista de habilidades */
+.skills-list {
+  display: flex; /* Flexbox para alinear horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos salten de línea si es necesario */
+  gap: 20px; /* Espacio entre habilidades */
+  padding: 0; /* Sin padding */
+  list-style: none; /* Sin viñetas */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; /* Centrado en contenedores más pequeños */
+}
+
+/* Cada habilidad */
+.skill {
+  background: linear-gradient(45deg, #000000, #2d2323);
+  color: #fff; /* Texto blanco */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 1.8; /* Mejora la legibilidad */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  min-width: 150px; /* Asegura un tamaño mínimo */
+  text-align: center;
+}
+
+/* Efecto hover */
+.skill:hover {
+  background-color: #444; /* Fondo más claro al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente */
+}
+
+/* Responsivo: Pantallas pequeñas */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 1.8rem; /* Reduce el tamaño del título */
+  }
+
+  .skill {
+    padding: 12px; /* Reduce el padding interno */
+    font-size: 13px; /* Reduce el tamaño del texto */
+  }
+
+  .skills-list {
+    gap: 15px; /* Reduce el espacio entre elementos */
+  }
+}
+
+/* Responsivo: Pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .skills {
+    padding: 30px 15px; /* Reduce el padding general */
+  }
+
+  .skills-title {
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+  }
+
+  .skill {
+    font-size: 12px; /* Reduce aún más el tamaño del texto */
+    padding: 10px; /* Ajusta el espaciado interno */
+  }
+}

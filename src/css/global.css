@@ -1,0 +1,14 @@
+/* global.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y borders no desborden */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Oculta desbordamientos horizontales */
+    background-color: #000; /* Fondo negro o según tu diseño */
+  }
+  

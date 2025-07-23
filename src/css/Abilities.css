@@ -1,0 +1,57 @@
+/* Contenedor general */
+.habilidades {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo */
+  text-align: center; /* Centra el contenido */
+  margin: 0; /* Elimina los márgenes para que el fondo cubra todo el ancho */
+  padding: 50px 20px; /* Ajusta el padding para dar más espacio interno */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.habilidades-title {
+  font-family: 'Bree Serif', serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #68a7ff;
+  text-decoration-thickness: 5px;
+  color: #d5d5d6;
+  font-size: 2rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 20px; /* Separación inferior */
+}
+
+/* Lista de habilidades */
+.habilidades-list {
+  display: flex; /* Usamos flexbox */
+  justify-content: center; /* Centrado horizontal */
+  flex-wrap: wrap; /* Permite que las habilidades se ajusten en filas */
+  gap: 15px; /* Espacio entre las habilidades */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo de cada habilidad */
+.habilidad {
+  background: linear-gradient(45deg, #000000, #2d2323);
+  color: rgb(255, 255, 255); /* Texto blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño del texto */
+  line-height: 25px; /* Altura de línea */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transición */
+  cursor: pointer; /* Cursor de mano */
+  font-family: 'Montserrat', sans-serif;
+  display: flex; /* Flexbox para alinear imagen y texto */
+  align-items: center; /* Alinea verticalmente */
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.habilidad-logo {
+  width: 24px; /* Ajusta el tamaño de la imagen */
+  height: 24px; /* Ajusta el tamaño de la imagen */
+  border-radius: 50%; /* Hace la imagen circular */
+}
+
+.habilidad:hover {
+  background-color: #444; /* Cambia el fondo al pasar el mouse */
+  transform: scale(1.05); /* Efecto de escala */
+}
