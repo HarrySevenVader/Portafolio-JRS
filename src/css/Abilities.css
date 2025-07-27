@@ -1,57 +1,71 @@
 /* Contenedor general */
 .habilidades {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo */
-  text-align: center; /* Centra el contenido */
-  margin: 0; /* Elimina los márgenes para que el fondo cubra todo el ancho */
-  padding: 50px 20px; /* Ajusta el padding para dar más espacio interno */
+  background-color: #000; /* Fondo oscuro sólido */
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
 .habilidades-title {
   font-family: 'Bree Serif', serif;
+  font-size: 1.8rem; /* Reduce el tamaño del título en móviles */
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-color: #68a7ff;
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: 4px;
   color: #d5d5d6;
-  font-size: 2rem; /* Tamaño del título */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 20px; /* Separación inferior */
+  margin: 0; /* Elimina márgenes extra */
 }
 
 /* Lista de habilidades */
 .habilidades-list {
-  display: flex; /* Usamos flexbox */
-  justify-content: center; /* Centrado horizontal */
-  flex-wrap: wrap; /* Permite que las habilidades se ajusten en filas */
-  gap: 15px; /* Espacio entre las habilidades */
-  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* Estilo de cada habilidad */
 .habilidad {
-  background: linear-gradient(45deg, #000000, #2d2323);
-  color: rgb(255, 255, 255); /* Texto blanco */
-  padding: 10px 15px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 14px; /* Tamaño del texto */
-  line-height: 25px; /* Altura de línea */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Transición */
-  cursor: pointer; /* Cursor de mano */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #181818;
+  border: 1.5px solid #00ffc3;
+  color: #fff;
+  border-radius: 28px;
+  padding: 10px 26px 10px 16px;
+  font-size: 1.08rem;
   font-family: 'Montserrat', sans-serif;
-  display: flex; /* Flexbox para alinear imagen y texto */
-  align-items: center; /* Alinea verticalmente */
-  gap: 10px; /* Espacio entre la imagen y el texto */
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: none;
 }
 
 .habilidad-logo {
-  width: 24px; /* Ajusta el tamaño de la imagen */
-  height: 24px; /* Ajusta el tamaño de la imagen */
-  border-radius: 50%; /* Hace la imagen circular */
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .habilidad:hover {
-  background-color: #444; /* Cambia el fondo al pasar el mouse */
-  transform: scale(1.05); /* Efecto de escala */
+  background-color: #00ffc3;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.habilidades-subtitle {
+  text-align: center;
+  margin: 32px 0 18px 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #000a;
 }

@@ -34,6 +34,43 @@ const AboutMe: React.FC = () => {
           Descargar CV
         </a>
       </div>
+
+      {/* Mini resumen */}
+
+      <div className="highlights-container">
+        <div className="highlight">
+            <i className="fas fa-graduation-cap"></i>
+            <p>Estudiante UTEM</p>
+        </div>
+        <div className="highlight">
+            <i className="fas fa-laptop-code"></i>
+            <p>Frontend & Mobile Dev</p>
+        </div>
+        <div className="highlight">
+            <i className="fas fa-project-diagram"></i>
+            <p>Gestión de Proyectos</p>
+        </div>
+        <div className="highlight">
+            <i className="fas fa-map-marker-alt"></i>
+            <p>Santiago, Chile</p>
+        </div>
+    </div>
+
+      <div className="interests-container">
+      <h4>Intereses Profesionales</h4>
+      <div className="interests-tags">
+        <span>Frontend Developer</span>
+        <span>Backend Developer</span>
+        <span>Fullstack</span>
+        <span>QA Tester</span>
+        <span>Technical Leader</span>
+        <span>UX/UI Researcher</span>
+        <span>DevOps</span>
+        <span>Cloud</span>
+        <span>Pentester</span>
+        <span>Seguridad Informática</span>
+      </div>
+    </div>
     </section>
   );
 };
