@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import Abilities from "./components/Abilities";
 import Proyectos from "./components/Proyectos";
 import Skills from "./components/skills";
-import Frameworks from "./components/frameworks";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <Proyectos />
       <Skills />
       <Abilities />
-      <Frameworks />
       <Footer />
     </div>
   );
