@@ -28,6 +28,7 @@
   font-size: 14px; /* Tamaño del texto */
   line-height: 25px; /* Altura de línea para legibilidad */
   flex-wrap: wrap; /* Para que los elementos se envuelvan si no caben en una sola fila */
+  color: white; /* Color del texto */
 }
 
 /* Social links */

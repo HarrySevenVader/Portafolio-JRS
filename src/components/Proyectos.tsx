@@ -3,6 +3,7 @@ import "../css/Proyectos.css";
 import githubIcon from '../assets/images/github.png';
 import multibateriasImg from "../assets/images/multibaterias.png";
 import ruta5Img from "../assets/images/ruta5.jpg"; // Asegúrate de que la ruta sea correcta
+import construtemImg from "../assets/images/software2Img.png";
 
 interface Proyecto {
   titulo: string;
@@ -36,12 +37,26 @@ const ProyectosDestacados: React.FC = () => {
       tecnologias: ["Flutter", "Firebase Auth", "API Rest", "Google Sign-In"],
       imagen: ruta5Img,
       githubUrl: "https://github.com/HarrySevenVader/Ruta-5-.git", // URL del repo xd
+    },
+    {
+      titulo: "Construtem",
+      descripcion: [
+        "Plataforma web para la gestión de ventas, facturación e inventario/despacho.",
+        "Proyecto académico colaborativo entre células.",
+        "Incluye sistema de ventas, sistema de pago y sistema de administración."
+      ],
+      tecnologias: ["Next.JS", "Golang", "PostgreSQL"],
+      imagen: construtemImg,
+      githubUrl: "https://github.com/Construtem",
     }
   ];
 
   return (
     <section className="proyectos">
       <h2>Mis Proyectos</h2>
+      <p className="servicios-intro">
+        Proyectos de software desarrollados como respaldo técnico de mi trabajo, con acceso directo a sus repositorios en GitHub.
+      </p>
       <div className="proyectos-grid">
         {proyectos.map((proyecto, index) => (
           <div className="proyecto-card" key={index}>

@@ -3,6 +3,7 @@ import Profile from "./components/Profile";
 import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import Abilities from "./components/Abilities";
+import Servicios from "./components/Servicios";
 import Proyectos from "./components/Proyectos";
 import Skills from "./components/skills";
 
@@ -12,6 +13,7 @@ function App() {
       <Header></Header>
       <Profile></Profile>
       <AboutMe></AboutMe>
+      <Servicios />
       <Proyectos />
       <Skills />
       <Abilities />

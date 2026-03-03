@@ -9,10 +9,11 @@
   text-align: center;
   color: #fff;
   padding: 50px 20px;
-  width: 100vw; /* Ancho completo */
-  min-height: 60vh; /* Altura mínima para pantallas grandes */
-  box-sizing: border-box; /* Evita desplazamientos por el padding */
-  overflow: hidden; /* Previene desbordamiento horizontal */
+  width: 100%;
+  min-height: 60vh;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Contenido del perfil */
@@ -21,18 +22,47 @@
   width: 100%; /* Hace que el contenido se ajuste al ancho */
 }
 
-/* Título del perfil */
+/* Título del perfil – Metal Green Diamond */
 .profile-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  background: linear-gradient(45deg, #08e2ff, #7873f5);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 3s ease infinite;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Reggae One', cursive;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(
+    135deg,
+    #f8fafc, /* white silver */
+    #cbd5e1, /* light silver */
+    #94a3b8, /* medium silver */
+    #64748b, /* dark silver */
+    #e2e8f0, /* bright silver */
+    #f8fafc  /* white silver */
+  );
+
+    background-size: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Efecto de borde tipo dibujo - stroke negro + blanco */
+    -webkit-text-stroke: 0.9px #000000;
+    
+    filter: 
+      drop-shadow(1px 1px 0px #fff)
+      drop-shadow(-1px -1px 0px #fff)
+      drop-shadow(1px -1px 0px #fff)
+      drop-shadow(-1px 1px 0px #fff);
+
+    letter-spacing: 0.7px;
 }
+
+
+@keyframes metalShine {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /* Animación del gradiente */
 @keyframes gradientAnimation {
@@ -65,18 +95,45 @@
 
 /* Botón genérico */
 .btn {
-  padding: 10px 20px;
+  padding: 12px 28px;
   font-size: 1rem;
-  border: 2px solid #fff;
-  border-radius: 5px;
+  font-weight: 500;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
   text-decoration: none;
   color: #fff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
 }
 
 .btn:hover {
-  background-color: #fff;
-  color: #000;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 25px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Botón de LinkedIn */
@@ -84,31 +141,74 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #0077b5; /* Color de fondo de LinkedIn */
-  border-color: #0077b5; /* Color del borde */
-  color: white; /* Color del texto */
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #0077b5, #005582);
+  border: 2px solid rgba(0, 119, 181, 0.5);
+  color: white;
+  padding: 12px 28px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 500;
+  box-shadow: 
+    0 4px 15px rgba(0, 119, 181, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-linkedin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-linkedin:hover::before {
+  left: 100%;
 }
 
 .btn-linkedin img {
-  width: 20px; /* Tamaño de la imagen */
-  height: 20px;
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
 }
 
 .btn-linkedin:hover {
-  background-color: #005582; /* Cambio de color al pasar el ratón */
-  color: #fff;
+  background: linear-gradient(135deg, #005582, #003d5c);
+  border-color: rgba(0, 119, 181, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 25px rgba(0, 119, 181, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-linkedin:hover img {
+  transform: scale(1.1);
 }
 
 /* Botón de contacto */
 .btn-contact {
-  background-color: transparent;
-  font-weight: normal;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+}
+
+.btn-contact:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 6px 25px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* Responsividad: Pantallas móviles */
@@ -120,6 +220,7 @@
 
   .profile-title {
     font-size: 2rem; /* Reduce el tamaño del título */
+    letter-spacing: 1px; /* Ajusta el espaciado */
   }
 
   .profile-subtitle {
