@@ -19,7 +19,7 @@ body {
   justify-content: space-between; /* Espaciado entre logo y enlaces */
   align-items: center; /* Centra verticalmente los elementos */
   padding: 0.5rem 1rem; /* Espaciado interno */
-  background: linear-gradient(45deg, #000000, #2d2323);
+  background: linear-gradient(45deg, #000000, #2d2323, #343434, #1c1818);
   color: white; /* Texto blanco */
   z-index: 100; /* Asegura que esté encima de otros elementos */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
@@ -55,6 +55,7 @@ body {
   font-size: 1rem; /* Tamaño del texto */
   font-weight: 500; /* Grosor del texto */
   transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+  font-family: 'Reggae One', cursive;
 }
 
 .nav-links li a:hover {

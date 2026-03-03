@@ -1,8 +1,10 @@
 /* Contenedor principal */
 .proyectos {
-  background-color: #000; /* Fondo negro */
-  color: #fff; /* Texto blanco */
+  background-color: #000;
+  color: #fff;
   padding: 2rem;
+  margin: 0;
+  width: 100%;
   text-align: center;
   position: relative;
 }
@@ -11,19 +13,39 @@
 .proyectos h2 {
   font-family: 'Bree Serif', serif;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #68a7ff;
-  text-decoration-thickness: 5px;
   color: #d5d5d6;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.proyectos h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #68a7ff, #00ffc3);
+  margin: 8px auto 0;
+  box-shadow: 0 0 12px #68a7ff88;
+}
+
+/* Descripción introductoria */
+.servicios-intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto 3rem;
 }
 
 /* Contenedor de tarjetas */
 .proyectos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  gap: 3rem 2rem;
   justify-items: center;
   align-items: start;
   max-width: 1200px;

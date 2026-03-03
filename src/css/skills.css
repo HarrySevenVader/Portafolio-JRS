@@ -1,22 +1,32 @@
 /* Contenedor general */
 .skills {
   text-align: center;
-  margin: 0 auto; /* Centra el contenedor */
-  padding: 50px 20px; /* Espaciado interno */
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo translúcido */
+  margin: 0;
+  padding: 50px 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Título del contenedor */
 .skills-title {
   font-family: 'Bree Serif', serif;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #68a7ff;
-  text-decoration-thickness: 5px;
   color: #d5d5d6;
   font-size: 2rem; /* Tamaño del título */
   font-weight: bold;
   margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #68a7ff, #00ffc3);
+  margin: 8px auto 0;
+  box-shadow: 0 0 12px #68a7ff88;
 }
 
 /* Lista de habilidades */
