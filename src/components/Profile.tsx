@@ -9,7 +9,7 @@ const Profile: React.FC = () => {
       <div className="profile-content">
         <h1 className="profile-title">Jarol Riquelme Santibañez</h1>
         <p className="profile-subtitle">
-          Egresado de Ingeniería en Informática | Software Engineer.
+          Ingeniero en Informática | Software Engineer.
         </p>
         <div className="profile-links">
           <a
