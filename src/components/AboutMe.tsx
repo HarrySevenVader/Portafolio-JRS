@@ -12,14 +12,14 @@ const AboutMe: React.FC = () => {
         <h2>Sobre Mí</h2>
         <h3>Hola, soy Jarol Riquelme</h3>
         <p>
-          Soy titulado de Ingeniería en Informática de la Universidad Tecnológica Metropolitana, en Santiago de Chile. Durante mi formación desarrollé una base sólida en programación y en el desarrollo de aplicaciones web, enfocándome en crear soluciones funcionales y bien estructuradas. Además, realicé mi práctica profesional en Sodimac, desempeñándome como Analista de Datos, lo que me permitió adquirir experiencia real sobre cómo es trabajar en el campo profesional y aplicar mis conocimientos en un entorno laboral. Actualmente me proyecto como Ingeniero de Software, con interés en seguir profundizando mis conocimientos en áreas como ciberseguridad, computación en la nube e inteligencia artificial, con el objetivo de aplicar estas tecnologías en el desarrollo de soluciones modernas, eficientes y escalables que generen un impacto positivo y aporten valor a las personas y organizaciones.
+          Soy egresado de Ingeniería en Informática de la Universidad Tecnológica Metropolitana, en Santiago de Chile. Durante mi formación desarrollé una base sólida en programación y en el desarrollo de aplicaciones web, enfocándome en crear soluciones funcionales y bien estructuradas. Además, realicé mi práctica profesional en Sodimac, desempeñándome como Analista de Datos, lo que me permitió adquirir experiencia real sobre cómo es trabajar en el campo profesional y aplicar mis conocimientos en un entorno laboral. Actualmente me proyecto como Ingeniero de Software, con interés en seguir profundizando mis conocimientos en áreas como ciberseguridad, computación en la nube e inteligencia artificial, con el objetivo de aplicar estas tecnologías en el desarrollo de soluciones modernas, eficientes y escalables que generen un impacto positivo y aporten valor a las personas y organizaciones.
         </p>
       </div>
       <div className="button-cv">
         <div className="button-parrot">
           <a
-            href="/assets/files/CV_JDRS.pdf"
-            download="CV_JDRS.pdf"
+            href="/assets/files/CV_Jarol_Riquelme.pdf"
+            download="CV_Jarol_Riquelme.pdf"
           >
             <button>
               Descargar CV
