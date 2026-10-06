@@ -1,22 +1,33 @@
-import React from "react";
-import { Link } from "react-scroll";
-import "../css/Header.css"; // Importa los estilos del header
+const navigation = [
+  { label: "Inicio", href: "#inicio" },
+  { label: "Perfil", href: "#perfil" },
+  { label: "Proyectos", href: "#proyectos" },
+  { label: "Stack", href: "#desarrollo" },
+  { label: "Experiencia", href: "#experiencia" },
+  { label: "Contacto", href: "#contacto" },
+];
 
-const Header: React.FC = () => {
+export function Header() {
   return (
-    <header className="header">
-      <div className="logo">JRS</div>
-      <nav>
-        <ul className="nav-links">
-          <li><Link to="aboutme-container" smooth={true} duration={500}>Sobre Mí</Link></li>
-          <li><Link to="servicios" smooth={true} duration={500}>Servicios</Link></li>
-          <li><Link to="proyectos" smooth={true} duration={500}>Proyectos</Link></li>
-          <li><Link to="skills" smooth={true} duration={500}>Habilidades</Link></li>
-          <li><Link to="contact" smooth={true} duration={500}>Contacto</Link></li>
-        </ul>
-      </nav>
+    <header className="site-header">
+      <div className="container header-inner">
+        <a className="wordmark" href="#inicio" aria-label="Jarol Riquelme, ir al inicio">
+          <img className="wordmark-logo" src="/assets/logo-skull-transparent.png" alt="" width="56" height="56" />
+          <span className="wordmark-prompt" aria-hidden="true">
+            &gt;<span className="wordmark-cursor">_</span>
+          </span>
+          <span className="wordmark-name">
+            <span>JAROL</span>
+            <strong>RIQUELME</strong>
+          </span>
+        </a>
+
+        <nav className="site-nav" aria-label="Navegación principal">
+          {navigation.map((item) => (
+            <a key={item.href} href={item.href}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
     </header>
   );
-};
-
-export default Header;
+}

@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;1,700;1,800&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+:root {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  /* Fondo general de la página. */
+  --page: #ecece9;
+  /* Fondo de tarjetas y sección de contacto. */
+  --paper: #f5f5f2;
+  /* Texto principal y enlaces destacados. */
+  --ink: #242724;
+  /* Texto secundario y navegación. */
+  --muted: #656b66;
+  /* Líneas divisorias y bordes suaves. */
+  --line: #c9cdc7;
+  /* Fondo exclusivo del logo y nombre en el encabezado. */
+  --brand-background: #0d0f12;
+  /* Verde del símbolo de terminal y del apellido. */
+  --brand-accent: #39ff14;
+  /* Verde del apellido al pasar el cursor o enfocarlo. */
+  --brand-accent-hover: #74ff5c;
+  /* Blanco frío del nombre JAROL. */
+  --brand-white: #e2e8f0;
+  /* Tipografía de los títulos editoriales del portafolio. */
+  --serif: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--page);
+}
+
+button, a { font: inherit; }
+a { color: inherit; }
+p, h1, h2, h3 { margin-top: 0; }
+
+::selection {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(100% - 72px, 1320px);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 20;
+  padding: 10px 14px;
+  color: var(--paper);
+  background: var(--ink);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #39ff14;
+  box-shadow: 0 2px 0 rgb(13 15 18 / 25%);
+  background-color: rgb(0 0 0 / 80%);
+  backdrop-filter: blur(12px);
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #39ff14 0%,
+    #39ff14 40%,
+    #a5ff92 50%,
+    #39ff14 60%,
+    #39ff14 100%
+  );
+  background-size: 200% 100%;
+  animation: header-signal 4s linear infinite;
+}
+
+@keyframes header-signal {
+  to { background-position: -200% 0; }
+}
+
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 104px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(7px, .9vw, 12px);
+  flex: none;
+  max-width: 100%;
+  padding: 6px 12px 6px 6px;
+  /*background: var(--brand-background);*/ /* Fondo exclusivo del logo y nombre en el encabezado. */
+  background: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.wordmark-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex: none;
+  object-fit: contain;
+}
+
+.wordmark-prompt {
+  flex: none;
+  color: var(--brand-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -.14em;
+  text-shadow: 0 0 6px rgb(57 255 20 / 18%);
+}
+
+.wordmark-name {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: .36em;
+  font-family: "Archivo", "Arial Narrow", sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.045em;
+  font-style: italic;
+}
+
+.wordmark-name > span { color: var(--brand-white); }
+
+.wordmark-name strong {
+  color: var(--brand-accent);
+  font-weight: 800;
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.wordmark-name::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: var(--brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.wordmark:hover .wordmark-name strong,
+.wordmark:focus-visible .wordmark-name strong {
+  color: var(--brand-accent-hover);
+  text-shadow: 0 0 6px rgb(57 255 20 / 20%);
+}
+
+.wordmark:hover .wordmark-name::after,
+.wordmark:focus-visible .wordmark-name::after {
+  transform: scaleX(1);
+}
+
+.wordmark-cursor {
+  animation: cursor-flash 1s steps(1, end) infinite;
+}
+
+@keyframes cursor-flash {
+  50% { opacity: 0; }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 26px);
+}
+
+.site-nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-style: italic;
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px 0;
+  color: var(--brand-white);
+  text-decoration: none;
+  font-size: .76rem;
+  white-space: nowrap;
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 1px;
+  background: var(--brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.section-label, .overline, .row-number, .project-kind, .experience-period {
+  font-size: .7rem;
+  font-weight: 650;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.section-label { margin-bottom: 24px; }
+.section-label span { color: var(--muted); }
+
+.section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, .55fr);
+  align-items: end;
+  gap: 70px;
+  margin-bottom: 52px;
+}
+
+.section-heading h2 {
+  max-width: 750px;
+  margin-bottom: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.45rem, 4.2vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.09;
+  letter-spacing: -.06em;
+}
+
+.section-description {
+  max-width: 400px;
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: .96rem;
+  line-height: 1.65;
+}
+
+.content-section {
+  padding: 100px 0 112px;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .75rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 105px;
+}
+
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
