@@ -30,6 +30,7 @@
   --brand-white: #e2e8f0;
   /* Tipografía de los títulos editoriales del portafolio. */
   --serif: Georgia, "Times New Roman", serif;
+  --header-height: 80px;
 }
 
 * { box-sizing: border-box; }
@@ -117,7 +118,7 @@ p, h1, h2, h3 { margin-top: 0; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  min-height: 104px;
+  min-height: var(--header-height);
 }
 
 .wordmark {
