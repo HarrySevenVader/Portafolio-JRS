@@ -18,11 +18,55 @@ export type Role = {
   description: string;
 };
 
+export type Certification = {
+  title: string;
+  issuer?: string;
+  year?: string;
+  url: string;
+};
+
+export type Practice = {
+  title: string;
+  description: string;
+};
+
 export const links = {
   email: "mailto:jriquelme.harrysev@gmail.com",
   github: "https://github.com/HarrySevenVader",
   linkedin: "https://www.linkedin.com/in/jarol-riquelme-santiba%C3%B1ez-71bb37338/",
 };
+
+export const profile = {
+  degree: "Ingeniero en Informática",
+  status: "Titulado",
+  university: "Universidad Tecnológica Metropolitana",
+  universityShortName: "UTEM",
+  period: "2021 – 2026",
+};
+
+// Los PDF viven en public/assets/files/. Completa issuer y year cuando confirmes esos datos.
+export const certifications: Certification[] = [
+  {
+    title: "Curso de Excel",
+    url: "/assets/files/Certificado_Curso_Excel_JR.pdf",
+  },
+  {
+    title: "Curso de Power BI",
+    url: "/assets/files/Certificado_Curso_PowerBI_JR.pdf",
+  },
+  {
+    title: "Power BI Analytics",
+    url: "/assets/files/Certificado_PowerBIAnalytcs_JR.pdf",
+  },
+];
+
+// Añade aquí nuevas actividades; la numeración del panel se genera automáticamente.
+export const practices: Practice[] = [
+  { title: "Desarrollo Web Full Stack", description: "Diseño y desarrollo soluciones web completas, desde interfaces claras y responsivas hasta APIs, lógica de negocio y bases de datos. Construyo productos pensados para funcionar de forma estable, escalar y quedar listos para producción en la nube." },
+  { title: "Desarrollo Mobile", description: "Creo aplicaciones móviles simples de usar, visualmente cuidadas y enfocadas en resolver necesidades concretas. Priorizo una navegación fluida, una experiencia intuitiva y una integración sólida con servicios y datos." },
+  { title: "Automatización de Procesos", description: "Identifico tareas repetitivas y las convierto en procesos automáticos que reducen tiempos, errores y trabajo manual." },
+  { title: "Análisis de datos", description: "Trabajo con datos desde su origen: los extraigo, limpio, transformo y válido para convertirlos en información confiable. A partir de ellos identifico patrones, oportunidades e insights que apoyan mejores decisiones." },
+];
 
 // Solo proyectos con un sitio público activo.
 export const projects: Project[] = [

@@ -288,6 +288,7 @@ p, h1, h2, h3 { margin-top: 0; }
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: .75rem;
+  /*background-color: rgb(0 0 0 / 80%);*/
 }
 
 .footer-inner {

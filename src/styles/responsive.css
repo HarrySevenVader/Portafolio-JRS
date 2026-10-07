@@ -7,6 +7,10 @@
   .section-heading { gap: 38px; }
 }
 
+@media (max-width: 1180px) {
+  .home-details { grid-template-columns: 1fr; gap: 48px; }
+}
+
 @media (max-width: 760px) {
   html { scroll-padding-top: 145px; }
   .container { width: min(100% - 40px, 600px); }
@@ -30,6 +34,7 @@
   .delivery-flow { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; margin-bottom: 0; padding: 18px 20px; }
   .delivery-flow-steps { justify-content: flex-start; }
   .home-details { grid-template-columns: 1fr; gap: 52px; padding: 70px 0 84px; margin-top: 55px; }
+  .practice-list { padding: 28px; }
   .project-row { grid-template-columns: 45px 1fr; gap: 15px; }
   .project-visit { grid-column: 2; width: fit-content; min-width: 140px; margin-top: 10px; }
   .stack-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -38,6 +43,11 @@
   .experience-row { grid-template-columns: 1fr; gap: 8px; }
   .experience-description { margin-top: 12px; }
   .footer-inner { flex-wrap: wrap; min-height: 100px; padding: 25px 0; }
+}
+
+@media (max-width: 600px) {
+  .practice-row { grid-template-columns: 30px minmax(0, 1fr); row-gap: 7px; }
+  .practice-description { grid-column: 2; }
 }
 
 @media (max-width: 420px) {
@@ -57,4 +67,6 @@
   .home-actions a {
     width: 100%;
   }
+  .profile-facts > div { grid-template-columns: 1fr; gap: 4px; }
+  .practice-list { padding: 22px; }
 }

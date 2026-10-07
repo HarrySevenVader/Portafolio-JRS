@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { links } from "../data/portfolio";
+import { certifications, links, practices, profile } from "../data/portfolio";
 import Portrait from "../styles/assets/e2.jpeg";
 
 const pipelineSteps = ["PUSH", "CHECKOUT", "NPM CI", "LINT + TEST", "BUILD · TS + VITE"];
@@ -28,12 +28,13 @@ export function Home() {
             <p className="overline">Portafolio personal / 2026</p>
             <h1 id="home-title">Software claro.<br /><em>Datos que sirven.</em></h1>
             <p className="home-intro">
-              Me encantan los videojuegos 🎮 y resolver problemas, creando soluciones eficientes y modernas para todo tipo de proyectos 💻. Experiencia Full-Stack, Móvil, APIs y Análisis de Datos 📱🔧.
+              Me encantan los videojuegos 🎮 y resolver problemas, creando soluciones eficientes y modernas para todo tipo de proyectos 💻. Experiencia Full-Stack Web & Móvil, APIs y Análisis de Datos 📱.
             </p>
 
             <div className="home-signature">
               <strong>Jarol Riquelme Santibañez</strong>
-              <span>Desarrollo full stack · análisis de datos · automatización</span>
+              {/*<span>Desarrollo full stack · análisis de datos · automatización</span>*/}
+              <span>Ingeniero en Informática</span>
             </div>
 
             <div className="home-actions">
@@ -118,18 +119,64 @@ export function Home() {
 
         <div className="home-details" id="perfil">
           <div className="about-copy">
-            <p className="section-label"><span>01</span> / Sobre mí</p>
-            <h2>Me interesa que una solución se entienda y se pueda mantener.</h2>
-            <p>
-              Combino desarrollo de software, automatización y análisis de datos. Mi punto de partida es conocer el problema, ordenar la información y construir con criterio.
+            <p className="section-label"><span>01</span> / Mi recorrido</p>
+            <h2>Pulso <em>propio.</em></h2>
+            <p className="profile-lead">
+              <strong>Probar, caer, ajustar, seguir.</strong>
+              Ese ritmo conecta mi trabajo en software con los videojuegos, el deporte, la música y el skate.
             </p>
+
+            <dl className="profile-facts">
+              <div><dt>Título</dt><dd>{profile.degree}</dd></div>
+              <div><dt>Estado</dt><dd>{profile.status}</dd></div>
+              <div><dt>Universidad</dt><dd>{profile.university} ({profile.universityShortName})</dd></div>
+              <div><dt>Período</dt><dd>{profile.period}</dd></div>
+            </dl>
+
+            <div className="profile-certifications">
+              <div className="profile-certifications-heading">
+                <h3>Certificaciones</h3>
+                {/*<span>{String(certifications.length).padStart(2, "0")}</span>*/}
+              </div>
+              {certifications.length > 0 ? (
+                <ul className="certification-list">
+                  {certifications.map((certification) => (
+                    <li key={certification.url}>
+                      <a href={certification.url} target="_blank" rel="noopener noreferrer">
+                        {(certification.issuer || certification.year) && (
+                          <span className="certification-meta">
+                            {[certification.issuer, certification.year].filter(Boolean).join(" · ")}
+                          </span>
+                        )}
+                        <strong>{certification.title}</strong>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="certification-empty">Mis certificados verificables se incorporarán aquí.</p>
+              )}
+            </div>
           </div>
 
           <div className="practice-list" aria-label="A qué me dedico">
+            <span className="practice-leds" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+              <span />
+            </span>
             <p className="section-label">A qué me dedico</p>
-            <div><span>01</span><strong>Desarrollo web</strong><p>Interfaces y servicios para proyectos reales.</p></div>
-            <div><span>02</span><strong>Automatización</strong><p>Menos trabajo manual en procesos repetitivos.</p></div>
-            <div><span>03</span><strong>Análisis de datos</strong><p>Información confiable para tomar decisiones.</p></div>
+            <ol className="practice-rows">
+              {practices.map((practice, index) => (
+                <li className="practice-row" key={practice.title}>
+                  <span className="practice-number">{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{practice.title}</strong>
+                  <p className="practice-description">{practice.description}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </div>
