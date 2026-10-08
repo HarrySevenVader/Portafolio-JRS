@@ -7,6 +7,14 @@ export type Project = {
   journey: string;
 };
 
+export type RepositoryProject = {
+  name: string;
+  kind: string;
+  summary: string;
+  tools: string[];
+  repositoryUrl: string;
+};
+
 export type StackGroup = {
   name: string;
   tools: string[];
@@ -88,6 +96,9 @@ export const projects: Project[] = [
     journey: "Explorar productos → informarse → contactar",
   },
 ];
+
+// Agrega aquí los proyectos cuyo código está en un repositorio, aunque aún no tengan sitio público.
+export const repositoryProjects: RepositoryProject[] = [];
 
 export const developmentStack: StackGroup[] = [
   { name: "Interfaz", tools: ["React", "TypeScript", "JavaScript", "HTML", "CSS"] },
