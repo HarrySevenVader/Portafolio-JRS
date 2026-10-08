@@ -118,9 +118,9 @@ export function Home() {
         </div>
 
         <div className="home-details" id="perfil">
-          <div className="about-copy">
+          <section className="about-copy" aria-labelledby="profile-heading">
             <p className="section-label"><span>01</span> / Mi recorrido</p>
-            <h2>Pulso <em>propio.</em></h2>
+            <h2 id="profile-heading">Pulso <em>propio.</em></h2>
             <p className="profile-lead">
               <strong>Probar, caer, ajustar, seguir.</strong>
               Ese ritmo conecta mi trabajo en software con los videojuegos, el deporte, la música y el skate.
@@ -129,7 +129,7 @@ export function Home() {
             <dl className="profile-facts">
               <div><dt>Título</dt><dd>{profile.degree}</dd></div>
               <div><dt>Estado</dt><dd>{profile.status}</dd></div>
-              <div><dt>Universidad</dt><dd>{profile.university} ({profile.universityShortName})</dd></div>
+              <div><dt>Institución</dt><dd>{profile.university} ({profile.universityShortName})</dd></div>
               <div><dt>Período</dt><dd>{profile.period}</dd></div>
             </dl>
 
@@ -158,26 +158,26 @@ export function Home() {
                 <p className="certification-empty">Mis certificados verificables se incorporarán aquí.</p>
               )}
             </div>
-          </div>
+          </section>
 
-          <div className="practice-list" aria-label="A qué me dedico">
+          <section className="practice-list" aria-labelledby="practice-heading">
             <span className="practice-leds" aria-hidden="true">
               <span />
               <span />
               <span />
               <span />
             </span>
-            <p className="section-label">A qué me dedico</p>
+            <h2 className="section-label" id="practice-heading">A qué me dedico</h2>
             <ol className="practice-rows">
               {practices.map((practice, index) => (
                 <li className="practice-row" key={practice.title}>
                   <span className="practice-number">{String(index + 1).padStart(2, "0")}</span>
-                  <strong>{practice.title}</strong>
+                  <h3 className="practice-title">{practice.title}</h3>
                   <p className="practice-description">{practice.description}</p>
                 </li>
               ))}
             </ol>
-          </div>
+          </section>
         </div>
       </div>
     </section>

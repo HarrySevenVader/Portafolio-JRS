@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;1,700;1,800&family=IBM+Plex+Mono:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,700;0,800;1,700;1,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap");
 
 :root {
   font-family: "Aptos", "Segoe UI", Arial, sans-serif;
@@ -30,6 +27,12 @@
   --brand-white: #e2e8f0;
   /* Tipografía de los títulos editoriales del portafolio. */
   --serif: Georgia, "Times New Roman", serif;
+  /* Texto de lectura en Perfil y Proyectos. */
+  --font-body: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  /* Etiquetas, números y estados técnicos. */
+  --font-meta: "IBM Plex Mono", monospace;
+  /* Títulos de impacto y nombres de actividades. */
+  --font-display: "Archivo", sans-serif;
   --header-height: 80px;
 }
 

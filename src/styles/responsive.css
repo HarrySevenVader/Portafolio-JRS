@@ -5,6 +5,8 @@
   .home-grid { gap: 40px; }
   .home-copy h1 { font-size: clamp(3.5rem, 7.5vw, 6rem); }
   .section-heading { gap: 38px; }
+  .project-row { grid-template-columns: 45px minmax(0, 1fr); }
+  .project-flow-panel { grid-column: 2; }
 }
 
 @media (max-width: 1180px) {
@@ -35,19 +37,34 @@
   .delivery-flow-steps { justify-content: flex-start; }
   .home-details { grid-template-columns: 1fr; gap: 52px; padding: 70px 0 84px; margin-top: 55px; }
   .practice-list { padding: 28px; }
-  .project-row { grid-template-columns: 45px 1fr; gap: 15px; }
-  .project-visit { grid-column: 2; width: fit-content; min-width: 140px; margin-top: 10px; }
+  .project-row { gap: 16px; }
+  .project-flow-panel { margin-top: 4px; }
   .stack-grid { grid-template-columns: 1fr; gap: 28px; }
   .stack-group { min-height: auto; padding-bottom: 12px; }
   .stack-group h3 { margin-bottom: 18px; }
   .experience-row { grid-template-columns: 1fr; gap: 8px; }
   .experience-description { margin-top: 12px; }
   .footer-inner { flex-wrap: wrap; min-height: 100px; padding: 25px 0; }
+  .projects-section::before {
+    background-position: center top, right top;
+    background-size: 100% 100%, auto 420px;
+  }
 }
 
 @media (max-width: 600px) {
   .practice-row { grid-template-columns: 30px minmax(0, 1fr); row-gap: 7px; }
   .practice-description { grid-column: 2; }
+  .project-flow { grid-template-columns: 1fr; gap: 6px; margin: 16px 0; }
+  .project-flow-node { flex-direction: row; justify-content: flex-start; gap: 10px; min-height: 54px; padding: 8px 12px; text-align: left; }
+  .project-flow-node svg { width: 20px; height: 20px; margin: 0; }
+  .project-flow-link { width: 1px; height: 14px; justify-self: center; }
+  .project-flow-link::after { top: auto; right: -3px; bottom: -2px; }
+  .project-flow-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-flow-outcomes .project-flow-node { min-height: 60px; }
+  .project-flow-outcomes::before,
+  .project-flow-outcomes .project-flow-node::before { display: none; }
+  .project-flow-outcomes { padding-left: 0; }
+  .project-flow-footer { align-items: start; flex-direction: column; }
 }
 
 @media (max-width: 420px) {
@@ -61,7 +78,8 @@
   .home-intro { font-size: .97rem; }
   .section-heading h2 { font-size: 2.4rem; }
   .project-row { grid-template-columns: 1fr; }
-  .project-visit { grid-column: 1; }
+  .project-flow-panel { grid-column: 1; padding: 12px; }
+  .project-flow-heading { font-size: .57rem; }
   .contact-links a { grid-template-columns: 1fr 20px; gap: 8px 10px; }
   .contact-links a > span:first-child { grid-column: 1 / -1; }
   .home-actions a {

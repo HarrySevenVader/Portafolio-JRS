@@ -4,6 +4,7 @@ export type Project = {
   summary: string;
   tools: string[];
   url: string;
+  journey: string;
 };
 
 export type StackGroup = {
@@ -76,6 +77,7 @@ export const projects: Project[] = [
     summary: "Carta, información de locales y acceso a pedidos reunidos en una experiencia sencilla para el cliente.",
     tools: ["React", "Diseño responsivo", "UX/UI"],
     url: "https://el-gustito.vercel.app/",
+    journey: "Explorar carta → hacer pedido → gestionar en local",
   },
   {
     name: "Óptica GYD",
@@ -83,6 +85,7 @@ export const projects: Project[] = [
     summary: "Una vitrina digital para conocer los lentes, entender cómo comprar y encontrar los canales de atención.",
     tools: ["React", "Diseño responsivo", "Despliegue web"],
     url: "https://www.opticagyd.cl/",
+    journey: "Explorar productos → informarse → contactar",
   },
 ];
 
