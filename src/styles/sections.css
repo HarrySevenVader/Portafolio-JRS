@@ -1,11 +1,52 @@
 .home-section {
+  --home-background-height: 680px;
+  --home-background-fade: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 75%,
+    transparent 100%
+  );
+
+  /* Funciones originales antes de la edición */
   position: relative;
   isolation: isolate;
   padding-top: 88px; /* conserva tu valor actual */
 }
 
+.home-matrix-background {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 0;
+  height: var(--home-background-height);
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: var(--home-background-fade);
+}
+
+.home-matrix-background .matrix-example {
+  position: absolute;
+}
+
 .home-section::before {
   content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  height: var(--home-background-height);
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    var(--page) 0%,
+    rgb(236 236 233 / 96%) 32%,
+    rgb(236 236 233 / 55%) 58%,
+    rgb(236 236 233 / 8%) 100%
+  );
+
+  mask-image: var(--home-background-fade);
+
+/* Atributos originales antes de la edicion */
+/*  content: "";
   position: absolute;
   inset: 0 0 auto;
   z-index: 0;
@@ -22,12 +63,12 @@
     ),
     url("./assets/fondos_0.png") 60% top / cover no-repeat;
 
-  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);*/
 }
 
 .home-section > .container {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* antes en 1 */
 }
 
 .home-grid {
@@ -60,6 +101,11 @@
   color: #4f5650;
   font-size: 1.06rem;
   line-height: 1.7;
+
+  /*font-family: var(--font-body);
+  font-size: clamp(.94rem, 1.15vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.55;*/
 }
 
 .home-signature {
@@ -370,9 +416,8 @@
 
 .about-copy { min-width: 0; max-width: 620px; }
 
-.about-copy h2 {
-  max-width: 660px;
-  margin-bottom: 20px;
+.about-copy h2,
+.projects-section .section-heading h2 {
   font-family: var(--font-display);
   font-size: clamp(2.65rem, 4vw, 4.1rem);
   font-weight: 800;
@@ -380,25 +425,47 @@
   letter-spacing: -.055em;
 }
 
-.about-copy h2 em { color: #f1480b; font-weight: 800; }
+.about-copy h2 {
+  max-width: 660px;
+  margin-bottom: 20px;
+}
 
-.profile-lead {
-  max-width: 580px;
-  margin-bottom: 26px;
-  color: #4f5650;
+.about-copy h2 em {
+  color: #f1480b;
+  font-weight: 800;
+}
+
+.projects-section .section-heading h2 em {
+  color: var(--brand-accent);
+  font-weight: 800;
+}
+
+/* Texto de lectura destacado */
+.profile-lead,
+.projects-section .section-description,
+.projects-section .project-content > p:not(.project-kind) {
+  /*color: #4f5650;
   font-family: var(--font-body);
   font-size: clamp(.94rem, 1.15vw, 1.05rem);
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.55;*/
+
+  max-width: 540px;
+  margin-bottom: 35px;
+  color: #4f5650;
+  font-size: 1.06rem;
+  line-height: 1.7;
 }
+
+/*
+.profile-lead {
+  max-width: 580px;
+  margin-bottom: 26px;
+}*/
 
 .profile-lead strong {
   display: block;
   margin-bottom: 6px;
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-size: clamp(1.16rem, 1.6vw, 1.4rem);
-  font-weight: 800;
 }
 
 .profile-facts { margin: 0; border-top: 1px solid var(--ink); }
@@ -418,6 +485,8 @@
   font-size: .68rem;
   font-weight: 600;
   text-transform: uppercase;
+  /* Estilo de fuente itálica para las etiquetas de los hechos del perfil. */
+  /*font-style: italic;*/
 }
 
 .profile-facts dd {
@@ -425,6 +494,7 @@
   margin: 0;
   font-size: .9rem;
   font-weight: 600;
+  font-style: italic;
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
@@ -583,8 +653,10 @@
 }
 
 .projects-section {
+  --projects-wallpaper: url("./assets/projects-bg-desktop.png");
   position: relative;
   isolation: isolate;
+  overflow: clip;
 }
 
 .projects-section::before {
@@ -596,37 +668,32 @@
   background-image:
     linear-gradient(
       to bottom,
-      rgb(236 236 233 / 10%) 0%,
-      rgb(236 236 233 / 10%) 55%,
-      var(--page) 100%
+      rgb(236 236 233 / 12%) 0%,
+      rgb(236 236 233 / 7%) 55%,
+      rgb(236 236 233 / 18%) 100%
     ),
-    url("./assets/projects_wallpaper.png");
+    var(--projects-wallpaper);
   background-position: center top;
-  background-size: 100% 100%, 100% auto;
+  background-size: 100% 100%, cover;
   background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    #000 12%,
-    #000 88%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    #000 12%,
-    #000 88%,
-    transparent 100%
-  );
+}
+
+.projects-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to bottom, var(--page), transparent 5%, transparent 95%, var(--page));
 }
 
 .projects-section > .container {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .projects-section .section-description { padding-left: 20px; border-left: 1px solid var(--line); }
-.projects-section .section-heading h2::after { content: "."; color: var(--brand-accent); }
+/*.projects-section .section-heading h2::after { content: "."; color: var(--brand-accent); }*/
 .project-list, .experience-list { border-top: 1px solid var(--line); }
 
 .project-row {

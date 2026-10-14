@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { certifications, links, practices, profile } from "../data/portfolio";
 import Portrait from "../styles/assets/e2.jpeg";
+import Example from "../Example";
 
 const pipelineSteps = ["PUSH", "CHECKOUT", "NPM CI", "LINT + TEST", "BUILD · TS + VITE"];
 
@@ -22,6 +23,9 @@ export function Home() {
 
   return (
     <section className="home-section" id="inicio" aria-labelledby="home-title">
+      <div className="home-matrix-background" aria-hidden="true">
+        <Example />
+      </div>
       <div className="container">
         <div className="home-grid">
           <div className="home-copy">

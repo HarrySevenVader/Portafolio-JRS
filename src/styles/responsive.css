@@ -1,4 +1,5 @@
 @media (max-width: 1040px) {
+  .projects-section { --projects-wallpaper: url("./assets/projects-bg-mobile.png"); }
   .header-inner { display: block; padding-top: 14px; padding-bottom: 8px; }
   .wordmark-logo { width: 52px; height: 52px; }
   .site-nav { flex-wrap: wrap; gap: 4px 20px; padding: 10px 0 3px; }
@@ -19,8 +20,14 @@
   .content-section { padding: 76px 0 82px; }
   .section-heading { grid-template-columns: 1fr; gap: 19px; margin-bottom: 38px; }
   .section-description { max-width: 540px; }
-  .home-section { padding-top: 42px; }
+  .home-section {--home-background-height: 500px; padding-top: 42px; }
   .home-section::before {
+    background: linear-gradient(
+      rgb(236 236 233 / 94%),
+      rgb(236 236 233 / 90%)
+    );
+  }
+  /*.home-section::before {
       height: 500px;
       background:
         linear-gradient(
@@ -28,7 +35,7 @@
           rgb(236 236 233 / 90%)
         ),
         url("./assets/fondos_0.png") 65% top / cover no-repeat;
-    }
+    }*/
   .home-grid { grid-template-columns: 1fr; gap: 5px; margin-bottom: 0; }
   .home-copy { padding: 25px 0 44px; }
   .home-copy h1 { font-size: clamp(3.3rem, 11vw, 5.5rem); }
@@ -45,9 +52,8 @@
   .experience-row { grid-template-columns: 1fr; gap: 8px; }
   .experience-description { margin-top: 12px; }
   .footer-inner { flex-wrap: wrap; min-height: 100px; padding: 25px 0; }
-  .projects-section::before {
-    background-position: center top, right top;
-    background-size: 100% 100%, auto 420px;
+  .projects-section .section-heading h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
   }
 }
 

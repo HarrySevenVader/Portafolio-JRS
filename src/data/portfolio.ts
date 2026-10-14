@@ -12,7 +12,8 @@ export type RepositoryProject = {
   kind: string;
   summary: string;
   tools: string[];
-  repositoryUrl: string;
+  sourceUrl: string;
+  sourceType: "repository" | "organization";
 };
 
 export type StackGroup = {
@@ -81,9 +82,9 @@ export const practices: Practice[] = [
 export const projects: Project[] = [
   {
     name: "Gustito",
-    kind: "Sitio web · Restaurante",
-    summary: "Carta, información de locales y acceso a pedidos reunidos en una experiencia sencilla para el cliente.",
-    tools: ["React", "Diseño responsivo", "UX/UI"],
+    kind: "Sitio web · Comercio gastronomico",
+    summary: "Carta de productos, información de locales y acceso a pedidos reunidos en una experiencia sencilla para el cliente.",
+    tools: ["Next.js + TypeScript", "Express.js", "PostgreSQl", "Git"],
     url: "https://el-gustito.vercel.app/",
     journey: "Explorar carta → hacer pedido → gestionar en local",
   },
@@ -98,7 +99,24 @@ export const projects: Project[] = [
 ];
 
 // Agrega aquí los proyectos cuyo código está en un repositorio, aunque aún no tengan sitio público.
-export const repositoryProjects: RepositoryProject[] = [];
+export const repositoryProjects: RepositoryProject[] = [
+  {
+    name: "Ruta 5",
+    kind: "Aplicación móvil · Restobar",
+    summary: "Aplicación móvil para consultar el menú y acceder a funciones de autenticación y valoración de platos.",
+    tools: ["Flutter", "Dart", "Firebase"],
+    sourceUrl: "https://github.com/HarrySevenVader/Ruta-5-",
+    sourceType: "repository",
+  },
+  {
+    name: "ConstrUTEM",
+    kind: "Organización · Sistema modular",
+    summary: "Conjunto de repositorios para módulos de acceso, inventario, ventas y facturación.",
+    tools: ["TypeScript", "Go", "Docker Compose"],
+    sourceUrl: "https://github.com/Construtem",
+    sourceType: "organization",
+  },
+];
 
 export const developmentStack: StackGroup[] = [
   { name: "Interfaz", tools: ["React", "TypeScript", "JavaScript", "HTML", "CSS"] },

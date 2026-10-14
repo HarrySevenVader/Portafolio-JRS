@@ -15,13 +15,13 @@ function setInert(element: HTMLDivElement | null, inert: boolean) {
 const pageCopy = [
   {
     eyebrow: "Proyectos publicados",
-    title: "Trabajo que ya está en línea",
+    title: <>Trabajo que ya está <em>en línea</em></>,
     description: "Una selección breve de sitios que pueden explorarse hoy. Cada uno responde a una necesidad distinta.",
     tab: "Publicados",
   },
   {
     eyebrow: "Proyectos en repositorio",
-    title: "Código para explorar",
+    title: <>Código para <em>explorar.</em></>,
     description: "Estos proyectos aún no tienen un sitio publicado. Aquí compartiré sus repositorios para mostrar cómo están construidos y cómo evolucionan.",
     tab: "Repositorios",
   },
@@ -60,7 +60,7 @@ function RepositoryProjects() {
   return (
     <div className="project-list repository-list">
       {entries.map((project, index) => (
-        <article className="project-row repository-row" key={project?.repositoryUrl ?? `empty-${index}`}>
+        <article className="project-row repository-row" key={project?.sourceUrl ?? `empty-${index}`}>
           <span className="row-number">{String(index + 1).padStart(2, "0")}</span>
           <div className="project-content">
             <p className="project-kind">{project?.kind ?? "Proyecto de repositorio"}</p>
@@ -71,14 +71,23 @@ function RepositoryProjects() {
                 <ul className="plain-tags" aria-label="Tecnologías utilizadas">
                   {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
                 </ul>
-                <a className="project-visit" href={project.repositoryUrl} target="_blank" rel="noopener noreferrer" aria-label={`Ver el repositorio de ${project.name} (se abre en otra pestaña)`}>
-                  Ver repositorio <span aria-hidden="true">↗</span>
+                <a
+                  className="project-visit"
+                  href={project.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ver ${project.sourceType === "organization" ? "la organización" : "el repositorio"} de ${project.name} (se abre en otra pestaña)`}
+                >
+                  {project.sourceType === "organization" ? "Ver organización" : "Ver repositorio"}
+                  <span aria-hidden="true">↗</span>
                 </a>
               </>
             )}
           </div>
           <div className="repository-panel" aria-hidden="true">
-            <span className="repository-panel-label">// REPOSITORIO</span>
+            <span className="repository-panel-label">
+              {project?.sourceType === "organization" ? "// ORGANIZACIÓN" : "// REPOSITORIO"}
+            </span>
             <span className="repository-panel-mark">&lt;/&gt;</span>
             <span className="repository-panel-status">{project ? "CÓDIGO DISPONIBLE" : "EN PREPARACIÓN"}</span>
           </div>
