@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import { SectionHeading } from "../components/SectionHeading";
 import { ProjectFlowDiagram } from "../components/ProjectFlowDiagram";
+import { ProjectTitle } from "../components/ProjectTitle";
 import { projects, repositoryProjects } from "../data/portfolio";
 import "../styles/projects-pagination.css";
+// import ProjectsBackground from "../ProjectsBackground";
+
+import {
+  RepositoryPagination,
+  REPOSITORIES_PER_PAGE,
+} from "../components/RepositoryPagination";
 
 type ProjectPage = 0 | 1;
 type RevealDirection = "forward" | "backward";
@@ -35,7 +42,7 @@ function PublishedProjects() {
           <span className="row-number">{String(index + 1).padStart(2, "0")}</span>
           <div className="project-content">
             <p className="project-kind">{project.kind}</p>
-            <h3>{project.name}</h3>
+            <ProjectTitle name={project.name} logoUrl={project.logoUrl} />
             <p>{project.summary}</p>
             <ul className="plain-tags" aria-label="Tecnologías utilizadas">
               {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
@@ -44,7 +51,11 @@ function PublishedProjects() {
               Visitar sitio <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <ProjectFlowDiagram id={`project-flow-${index + 1}`} journey={project.journey} />
+          <ProjectFlowDiagram
+            id={`project-flow-${index + 1}`}
+            journey={project.journey}
+            variant={project.flowType}
+          />
         </article>
       ))}
     </div>
@@ -52,48 +63,96 @@ function PublishedProjects() {
 }
 
 function RepositoryProjects() {
+  const slotCount = Math.max(
+    REPOSITORIES_PER_PAGE,
+    Math.ceil(repositoryProjects.length / REPOSITORIES_PER_PAGE)
+      * REPOSITORIES_PER_PAGE,
+  );
+
   const entries = Array.from(
-    { length: Math.max(2, repositoryProjects.length) },
+    { length: slotCount },
     (_, index) => repositoryProjects[index] ?? null,
   );
 
   return (
-    <div className="project-list repository-list">
+    <RepositoryPagination>
       {entries.map((project, index) => (
-        <article className="project-row repository-row" key={project?.sourceUrl ?? `empty-${index}`}>
-          <span className="row-number">{String(index + 1).padStart(2, "0")}</span>
+        <article
+          className="project-row repository-row"
+          key={project?.sourceUrl ?? `empty-${index}`}
+        >
+          <span className="row-number">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
           <div className="project-content">
-            <p className="project-kind">{project?.kind ?? "Proyecto de repositorio"}</p>
-            <h3>{project?.name ?? "Por presentar"}</h3>
-            <p>{project?.summary ?? "Pronto compartiré el código y los detalles de este proyecto."}</p>
-            {project && (
+            <p className="project-kind">
+              {project?.kind ?? "Espacio reservado"}
+            </p>
+
+            <ProjectTitle
+              name={project?.name ?? "Próximamente"}
+              logoUrl={project?.logoUrl}
+              loading="eager"
+            />
+
+            <p>
+              {project?.summary ??
+                "Mi próximo proyecto tendrá su lugar aquí."}
+            </p>
+
+            {project ? (
               <>
                 <ul className="plain-tags" aria-label="Tecnologías utilizadas">
-                  {project.tools.map((tool) => <li key={tool}>{tool}</li>)}
+                  {project.tools.map((tool) => (
+                    <li key={tool}>{tool}</li>
+                  ))}
                 </ul>
+
                 <a
                   className="project-visit"
                   href={project.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Ver ${project.sourceType === "organization" ? "la organización" : "el repositorio"} de ${project.name} (se abre en otra pestaña)`}
+                  aria-label={`Ver ${
+                    project.sourceType === "organization"
+                      ? "la organización"
+                      : "el repositorio"
+                  } de ${project.name} (se abre en otra pestaña)`}
                 >
-                  {project.sourceType === "organization" ? "Ver organización" : "Ver repositorio"}
+                  {project.sourceType === "organization"
+                    ? "Ver organización"
+                    : "Ver repositorio"}
                   <span aria-hidden="true">↗</span>
                 </a>
               </>
+            ) : (
+              <span className="repository-placeholder-status">
+                En preparación
+              </span>
             )}
           </div>
+
           <div className="repository-panel" aria-hidden="true">
             <span className="repository-panel-label">
-              {project?.sourceType === "organization" ? "// ORGANIZACIÓN" : "// REPOSITORIO"}
+              {!project
+                ? "// PRÓXIMO PROYECTO"
+                : project.sourceType === "organization"
+                  ? "// ORGANIZACIÓN"
+                  : "// REPOSITORIO"}
             </span>
-            <span className="repository-panel-mark">&lt;/&gt;</span>
-            <span className="repository-panel-status">{project ? "CÓDIGO DISPONIBLE" : "EN PREPARACIÓN"}</span>
+
+            <span className="repository-panel-mark">
+              {project ? "</>" : "+"}
+            </span>
+
+            <span className="repository-panel-status">
+              {project ? "CÓDIGO DISPONIBLE" : "EN PREPARACIÓN"}
+            </span>
           </div>
         </article>
       ))}
-    </div>
+    </RepositoryPagination>
   );
 }
 
@@ -133,6 +192,12 @@ export function Projects() {
 
   return (
     <section className="content-section projects-section" id="proyectos" aria-label="Proyectos">
+      {/**
+      <ProjectsBackground
+        fullscreen={false}
+        speed={1}
+        className="projects-animated-background"
+      />*/}
       <div className="container">
         <nav className="project-pagination" aria-label="Páginas de proyectos">
           <span className="project-pagination-count">Colección / 0{activePage + 1} de 02</span>
@@ -153,26 +218,42 @@ export function Projects() {
         </nav>
 
         <div className="projects-stage" id="projects-page-content">
-          {transition && (
-            <div
-              className={`projects-page projects-page--outgoing projects-page--outgoing-${transition.direction}`}
-              aria-hidden="true"
-              ref={(element) => setInert(element, true)}
-            >
-              <ProjectPageContent pageIndex={transition.from} />
-            </div>
-          )}
-          <div
-            className={transition ? `projects-page projects-page--${transition.direction}` : "projects-page"}
-            key={activePage}
-            ref={(element) => setInert(element, transition !== null)}
-            aria-hidden={transition !== null}
-            onAnimationEnd={(event) => {
-              if (event.animationName.startsWith("projects-reveal-")) setTransition(null);
-            }}
-          >
-            <ProjectPageContent pageIndex={activePage} />
-          </div>
+          {([0, 1] as const).map((pageIndex) => {
+            const isActive = activePage === pageIndex;
+            const isLeaving = transition?.from === pageIndex;
+            const isUnavailable = !isActive || transition !== null;
+
+            let pageClassName = "projects-page";
+
+            if (transition) {
+              if (isActive) {
+                pageClassName += ` projects-page--${transition.direction}`;
+              } else if (isLeaving) {
+                pageClassName +=
+                  ` projects-page--outgoing projects-page--outgoing-${transition.direction}`;
+              }
+            }
+
+            return (
+              <div
+                key={pageIndex}
+                className={pageClassName}
+                data-inactive={!isActive && !isLeaving ? "true" : undefined}
+                aria-hidden={isUnavailable}
+                ref={(element) => setInert(element, isUnavailable)}
+                onAnimationEnd={(event) => {
+                  if (
+                    isActive &&
+                    event.animationName.startsWith("projects-reveal-")
+                  ) {
+                    setTransition(null);
+                  }
+                }}
+              >
+                <ProjectPageContent pageIndex={pageIndex} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

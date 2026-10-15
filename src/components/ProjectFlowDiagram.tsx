@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Project } from "../data/portfolio";
 
 type FlowIconName = "users" | "window" | "automation" | "database" | "cloud";
 
@@ -24,30 +25,117 @@ function FlowNode({ icon, title, detail }: { icon: FlowIconName; title: string; 
   );
 }
 
-export function ProjectFlowDiagram({ id, journey }: { id: string; journey: string }) {
+function GustitoFlow() {
   return (
-    <section className="project-flow-panel" aria-labelledby={id}>
-      <div className="project-flow-heading">
-        <h4 id={id}><span className="project-flow-slash" aria-hidden="true">/</span> Arquitectura de solución</h4>
-        <span className="project-flow-live">En producción</span>
-      </div>
+    <div className="project-flow">
+      <FlowNode icon="users" title="Usuarios" detail="Clientes" />
 
-      <div className="project-flow">
-        <FlowNode icon="users" title="Usuarios" detail="Clientes" />
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <FlowNode icon="window" title="Frontend" detail="Next.js" />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <FlowNode icon="automation" title="API" detail="Express.js" />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <div className="project-flow-outcomes">
+        <FlowNode
+          icon="database"
+          title="Base de datos"
+          detail="PostgreSQL"
+        />
+        <FlowNode
+          icon="cloud"
+          title="Despliegue"
+          detail="Vercel / Render / Supabase"
+        />
+      </div>
+    </div>
+  );
+}
+
+function OpticaGydFlow() {
+  return (
+    <>
+      <div className="project-flow project-flow--landing">
+        <FlowNode
+          icon="users"
+          title="Usuarios"
+          detail="Visitantes"
+        />
+
         <span className="project-flow-link" aria-hidden="true" />
-        <FlowNode icon="window" title="Frontend" detail="React" />
+
+        <FlowNode
+          icon="window"
+          title="Frontend"
+          detail="React"
+        />
+
         <span className="project-flow-link" aria-hidden="true" />
-        <FlowNode icon="automation" title="API" detail="n8n · flujos" />
-        <span className="project-flow-link" aria-hidden="true" />
+
         <div className="project-flow-outcomes">
-          <FlowNode icon="database" title="Base de datos" detail="Información" />
-          <FlowNode icon="cloud" title="Despliegue" detail="Sitio en línea" />
+          <FlowNode
+            icon="automation"
+            title="Enlaces externos"
+            detail="Canva / Instagram / WhatsApp"
+          />
+          <FlowNode
+            icon="automation"
+            title="API de mapas"
+            detail="Google Maps"
+          />
         </div>
       </div>
 
+      <p className="project-flow-deployment">
+        <FlowIcon name="cloud" />
+        <span>
+          Despliegue: <strong>Vercel</strong>
+        </span>
+      </p>
+    </>
+  );
+}
+
+type ProjectFlowDiagramProps = {
+  id: string;
+  journey: string;
+  variant: Project["flowType"];
+};
+
+export function ProjectFlowDiagram({
+  id,
+  journey,
+  variant,
+}: ProjectFlowDiagramProps) {
+  return (
+    <section className="project-flow-panel" aria-labelledby={id}>
+      <div className="project-flow-heading">
+        <h4 id={id}>
+          <span className="project-flow-slash" aria-hidden="true">
+            /
+          </span>{" "}
+          Arquitectura de solución
+        </h4>
+
+        <span className="project-flow-live">En producción</span>
+      </div>
+
+      {variant === "landing" ? <OpticaGydFlow /> : <GustitoFlow />}
+
       <div className="project-flow-footer">
-        <p className="project-flow-journey"><span>// Flujo principal:</span> {journey}</p>
-        <span className="project-flow-online"><span aria-hidden="true">›</span> sistema online <i aria-hidden="true" /></span>
+        <p className="project-flow-journey">
+          <span>// Flujo principal:</span> {journey}
+        </p>
+
+        <span className="project-flow-online">
+          <span aria-hidden="true">›</span>
+          Sistema Online
+          <i aria-hidden="true" />
+        </span>
       </div>
     </section>
   );

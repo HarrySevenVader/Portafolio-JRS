@@ -5,6 +5,7 @@ import App from "./App";
 import "./styles/global.css";
 import "./styles/sections.css";
 import "./styles/responsive.css";
+// import ProjectsBackground from "./ProjectsBackground";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

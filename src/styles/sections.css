@@ -692,6 +692,52 @@
   z-index: 3;
 }
 
+/*.projects-section {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.projects-section > .projects-animated-background {
+  z-index: 0;
+}
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgb(236 236 233 / 12%) 0%,
+    rgb(236 236 233 / 7%) 55%,
+    rgb(236 236 233 / 18%) 100%
+  );
+}
+
+.projects-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    var(--page),
+    transparent 5%,
+    transparent 95%,
+    var(--page)
+  );
+}
+
+.projects-section > .container {
+  position: relative;
+  z-index: 3;
+}*/
+
 .projects-section .section-description { padding-left: 20px; border-left: 1px solid var(--line); }
 /*.projects-section .section-heading h2::after { content: "."; color: var(--brand-accent); }*/
 .project-list, .experience-list { border-top: 1px solid var(--line); }
@@ -708,8 +754,8 @@
 }
 
 .project-row:nth-child(even) {
-  --project-accent: #f2a12a;
-  --project-glow: rgb(242 161 42 / 14%);
+  --project-accent: #39ff14;
+  --project-glow: rgb(57 255 20 / 13%);
 }
 
 .project-row .row-number {
@@ -740,6 +786,51 @@
   line-height: 1.05;
   letter-spacing: -.05em;
   overflow-wrap: anywhere;
+}
+
+/* Caja compartida para los logos de publicados y repositorios. */
+.project-content h3.project-title--logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: min(100%, 300px);
+  height: 110px;
+}
+
+.project-title-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transform-origin: left center;
+
+  transform:
+    translate(
+      var(--project-logo-offset-x, 0px),
+      var(--project-logo-offset-y, 0px)
+    )
+    scale(var(--project-logo-scale, 1));
+}
+
+/* Ajustes ópticos del espacio transparente de cada archivo. */
+.project-title-logo[src$="gustito-logo.png"] {
+  --project-logo-offset-x: -20px;
+}
+
+.project-title-logo[src$="construtem.png"] {
+  --project-logo-offset-x: -6px;
+}
+
+.project-title-logo[src$="ruta5-logo.png"] {
+  --project-logo-scale: 0.6;
+  --project-logo-offset-x: 2px;
+}
+
+.project-title-logo[src$="beat-logo.png"] {
+  --project-logo-scale: 0.65;
+  --project-logo-offset-x: -10px;
+  --project-logo-offset-y: 0px;
 }
 
 .project-content > p:not(.project-kind) {
@@ -837,6 +928,31 @@
   align-items: center;
   gap: 4px;
   margin: 18px 0 14px;
+}
+
+/* Usuarios → Frontend → conexiones externas. */
+.project-flow--landing {
+  grid-template-columns:
+    minmax(0, 1fr)
+    18px
+    minmax(0, 1fr)
+    18px
+    minmax(0, 1.5fr);
+}
+
+.project-flow-deployment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.project-flow-deployment svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
 }
 
 .project-flow-node {

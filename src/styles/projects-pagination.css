@@ -74,6 +74,10 @@
   min-width: 0;
 }
 
+.projects-stage > .projects-page[hidden] {
+  display: none;
+}
+
 .projects-page {
   position: relative;
 }
@@ -238,4 +242,106 @@
   .projects-page::after { animation: none; }
 
   .projects-page::after { display: none; }
+}
+
+.repository-pagination {
+  --repository-accent: #38bdf8;
+}
+
+.repository-pagination-controls {
+  margin-top: 24px;
+  margin-bottom: 0;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 75%);
+}
+
+.repository-pagination-controls .project-pagination-options {
+  flex-wrap: wrap;
+}
+
+.repository-pagination-controls .project-pagination-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.repository-pagination-controls
+  .project-pagination-button[aria-current="page"] {
+  border-bottom-color: var(--repository-accent);
+}
+
+.repository-pagination-controls
+  .project-pagination-button:hover:not(:disabled):not([aria-current="page"]) {
+  background: rgb(56 189 248 / 12%);
+}
+
+.repository-pagination-controls .project-pagination-button:focus-visible {
+  outline-color: #0284c7;
+}
+
+.repository-pagination-controls .project-pagination-button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+  background: transparent;
+}
+
+/* Mismas animaciones existentes; cambia únicamente el color del barrido. */
+.repository-pagination .projects-page--forward::after {
+  background: linear-gradient(
+    to right,
+    transparent calc(100% - 18px),
+    rgb(56 189 248 / 16%) calc(100% - 12px),
+    var(--repository-accent) calc(100% - 2px),
+    transparent calc(100% - 2px)
+  );
+}
+
+.repository-pagination .projects-page--backward::after {
+  background: linear-gradient(
+    to left,
+    transparent calc(100% - 18px),
+    rgb(56 189 248 / 16%) calc(100% - 12px),
+    var(--repository-accent) calc(100% - 2px),
+    transparent calc(100% - 2px)
+  );
+}
+
+.repository-placeholder-status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+@media (max-width: 760px) {
+  .repository-pagination-controls .project-pagination-options {
+    justify-content: center;
+  }
+}
+
+/* Todas las páginas comparten la altura de la más alta. */
+.repository-pagination > .projects-stage > .projects-page {
+  align-self: stretch;
+}
+
+/* Oculta el contenido, conservando su espacio dentro del Grid. */
+.repository-pagination
+  > .projects-stage
+  > .projects-page[data-inactive="true"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Las dos pestañas comparten una altura estable. */
+#projects-page-content > .projects-page {
+  align-self: stretch;
+}
+
+/* Oculta la pestaña inactiva conservando su espacio. */
+#projects-page-content > .projects-page[data-inactive="true"] {
+  visibility: hidden;
+  pointer-events: none;
 }

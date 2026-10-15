@@ -1,14 +1,17 @@
 export type Project = {
   name: string;
+  logoUrl?: string;
   kind: string;
   summary: string;
   tools: string[];
   url: string;
   journey: string;
+  flowType: "full-stack" | "landing";
 };
 
 export type RepositoryProject = {
   name: string;
+  logoUrl?: string;
   kind: string;
   summary: string;
   tools: string[];
@@ -82,19 +85,23 @@ export const practices: Practice[] = [
 export const projects: Project[] = [
   {
     name: "Gustito",
-    kind: "Sitio web · Comercio gastronomico",
+    logoUrl: "/assets/projects/gustito-logo.png",
+    kind: "Sitio web · Trabajo de Titulación · Gastronomia",
     summary: "Carta de productos, información de locales y acceso a pedidos reunidos en una experiencia sencilla para el cliente.",
-    tools: ["Next.js + TypeScript", "Express.js", "PostgreSQl", "Git"],
+    tools: ["Diseño UX/UI", "Desarrollo full stack", "DevOps", "Scrum"],
     url: "https://el-gustito.vercel.app/",
     journey: "Explorar carta → hacer pedido → gestionar en local",
+    flowType: "full-stack",
   },
   {
     name: "Óptica GYD",
-    kind: "Sitio web · Comercio local",
+    logoUrl: "/assets/projects/logo-gyd.png",
+    kind: "Landing Page · Comercio local",
     summary: "Una vitrina digital para conocer los lentes, entender cómo comprar y encontrar los canales de atención.",
-    tools: ["React", "Diseño responsivo", "Despliegue web"],
+    tools: ["Desarrollo Frontend", "Diseño UX/UI", "Despliegue Web"],
     url: "https://www.opticagyd.cl/",
     journey: "Explorar productos → informarse → contactar",
+    flowType: "landing",
   },
 ];
 
@@ -102,6 +109,7 @@ export const projects: Project[] = [
 export const repositoryProjects: RepositoryProject[] = [
   {
     name: "Ruta 5",
+    logoUrl: "/assets/projects/ruta5-logo.png",
     kind: "Aplicación móvil · Restobar",
     summary: "Aplicación móvil para consultar el menú y acceder a funciones de autenticación y valoración de platos.",
     tools: ["Flutter", "Dart", "Firebase"],
@@ -110,11 +118,21 @@ export const repositoryProjects: RepositoryProject[] = [
   },
   {
     name: "ConstrUTEM",
+    logoUrl: "/assets/projects/construtem.png",
     kind: "Organización · Sistema modular",
     summary: "Conjunto de repositorios para módulos de acceso, inventario, ventas y facturación.",
     tools: ["TypeScript", "Go", "Docker Compose"],
     sourceUrl: "https://github.com/Construtem",
     sourceType: "organization",
+  },
+  {
+    name: "Beat MP3 Converter",
+    logoUrl: "/assets/projects/beat-logo.png",
+    kind: "Aplicación web · Audio",
+    summary: "Conversión y descarga de audio en formato MP3 a partir de URLs.",
+    tools: ["Next.js", "TypeScript", "FastAPI", "yt-dlp"],
+    sourceUrl: "https://github.com/HarrySevenVader/beat-mp3-converter",
+    sourceType: "repository",
   },
 ];
 
