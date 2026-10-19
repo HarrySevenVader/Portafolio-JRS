@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { SectionHeading } from "../components/SectionHeading";
-import { ProjectFlowDiagram } from "../components/ProjectFlowDiagram";
+import {
+  ProjectFlowDiagram,
+  RepositoryFlowDiagram,
+} from "../components/ProjectFlowDiagram";
 import { ProjectTitle } from "../components/ProjectTitle";
 import { projects, repositoryProjects } from "../data/portfolio";
 import "../styles/projects-pagination.css";
@@ -133,23 +136,30 @@ function RepositoryProjects() {
             )}
           </div>
 
-          <div className="repository-panel" aria-hidden="true">
-            <span className="repository-panel-label">
-              {!project
-                ? "// PRÓXIMO PROYECTO"
-                : project.sourceType === "organization"
-                  ? "// ORGANIZACIÓN"
-                  : "// REPOSITORIO"}
-            </span>
+          {project?.flow ? (
+            <RepositoryFlowDiagram
+              id={`repository-flow-${index + 1}`}
+              flow={project.flow}
+            />
+          ) : (
+            <div className="repository-panel" aria-hidden="true">
+              <span className="repository-panel-label">
+                {!project
+                  ? "// PRÓXIMO PROYECTO"
+                  : project.sourceType === "organization"
+                    ? "// ORGANIZACIÓN"
+                    : "// REPOSITORIO"}
+              </span>
 
-            <span className="repository-panel-mark">
-              {project ? "</>" : "+"}
-            </span>
+              <span className="repository-panel-mark">
+                {project ? "</>" : "+"}
+              </span>
 
-            <span className="repository-panel-status">
-              {project ? "CÓDIGO DISPONIBLE" : "EN PREPARACIÓN"}
-            </span>
-          </div>
+              <span className="repository-panel-status">
+                {project ? "CÓDIGO DISPONIBLE" : "EN PREPARACIÓN"}
+              </span>
+            </div>
+          )}
         </article>
       ))}
     </RepositoryPagination>

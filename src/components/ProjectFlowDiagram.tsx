@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Project } from "../data/portfolio";
+import type { Project, RepositoryFlow } from "../data/portfolio";
 
 type FlowIconName = "users" | "window" | "automation" | "database" | "cloud";
 
@@ -136,6 +136,234 @@ export function ProjectFlowDiagram({
           Sistema Online
           <i aria-hidden="true" />
         </span>
+      </div>
+    </section>
+  );
+}
+
+function Ruta5Flow() {
+  return (
+    <div className="project-flow project-flow--landing">
+      <FlowNode
+        icon="users"
+        title="Usuario"
+        detail="Aplicación móvil"
+      />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <FlowNode
+        icon="window"
+        title="App"
+        detail="Flutter / Dart / Provider"
+      />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <div className="project-flow-outcomes">
+        <FlowNode
+          icon="cloud"
+          title="Autenticación"
+          detail="Firebase Auth / Google"
+        />
+
+        <FlowNode
+          icon="automation"
+          title="API externa"
+          detail="Menú y valoraciones"
+        />
+      </div>
+    </div>
+  );
+}
+
+function BeatFlow() {
+  return (
+    <div className="project-flow">
+      <FlowNode
+        icon="users"
+        title="Usuario"
+        detail="URL de YouTube"
+      />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <FlowNode
+        icon="window"
+        title="Frontend"
+        detail="Next.js / TypeScript"
+      />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <FlowNode
+        icon="automation"
+        title="API"
+        detail="Python / FastAPI"
+      />
+
+      <span className="project-flow-link" aria-hidden="true" />
+
+      <div className="project-flow-outcomes">
+        <FlowNode
+          icon="automation"
+          title="Procesamiento"
+          detail="Workers / yt-dlp / FFmpeg"
+        />
+
+        <FlowNode
+          icon="database"
+          title="Estado de tareas"
+          detail="SQLite / progreso"
+        />
+
+        <FlowNode
+          icon="cloud"
+          title="Resultado"
+          detail="Audio temporal / descarga"
+        />
+      </div>
+    </div>
+  );
+}
+
+function ConstrutemDispatchFlow() {
+  return (
+    <div className="dispatch-flow">
+      <div className="project-flow">
+        <FlowNode
+          icon="users"
+          title="Administración"
+          detail="Gestión de despacho"
+        />
+
+        <span className="project-flow-link" aria-hidden="true" />
+
+        <FlowNode
+          icon="window"
+          title="Frontend"
+          detail="Next.js / TypeScript"
+        />
+
+        <span className="project-flow-link" aria-hidden="true" />
+
+        <FlowNode
+          icon="automation"
+          title="API de despacho"
+          detail="Go / Gin"
+        />
+
+        <span className="project-flow-link" aria-hidden="true" />
+
+        <div className="project-flow-outcomes">
+          <FlowNode
+            icon="database"
+            title="Datos"
+            detail="PostgreSQL / GORM"
+          />
+          <FlowNode
+            icon="window"
+            title="Documentos"
+            detail="Ficha de despacho / PDF"
+          />
+        </div>
+      </div>
+
+      <p className="dispatch-flow-logic">
+        <strong>Lógica de despacho</strong>
+        Capacidad de camiones, peso, volumen y costo por distancia.
+      </p>
+
+      <dl className="dispatch-flow-integrations" aria-label="Conexiones de la célula de despacho">
+        <div>
+          <dt>Google Maps</dt>
+          <dd>Mapa y ruta en frontend; distancia y tiempo en la API.</dd>
+        </div>
+        <div>
+          <dt>Ventas → Despacho</dt>
+          <dd>Cálculo de despachos desde una cotización.</dd>
+        </div>
+        <div>
+          <dt>Facturación → Despacho</dt>
+          <dd>Aprobación del despacho y actualización de stock.</dd>
+        </div>
+      </dl>
+    </div>
+  );
+}
+
+type RepositoryFlowConfig = {
+  title: string;
+  status: string;
+  note: string;
+  content: ReactNode;
+};
+
+const repositoryFlowConfig: Record<
+  RepositoryFlow["type"],
+  RepositoryFlowConfig
+> = {
+  "mobile-api": {
+    title: "Arquitectura móvil",
+    status: "Proyecto académico",
+    note: "Distribución: generación de APK documentada.",
+    content: <Ruta5Flow />,
+  },
+
+  "audio-pipeline": {
+    title: "Arquitectura de conversión",
+    status: "Código disponible",
+    note: "Infraestructura configurada: Vercel / Render.",
+    content: <BeatFlow />,
+  },
+
+  "dispatch-service": {
+    title: "Arquitectura de despacho",
+    status: "Proyecto académico",
+    note: "Infraestructura configurada: Docker Compose / GitHub Actions / GKE.",
+    content: <ConstrutemDispatchFlow />,
+  },
+};
+
+type RepositoryFlowDiagramProps = {
+  id: string;
+  flow: RepositoryFlow;
+};
+
+export function RepositoryFlowDiagram({
+  id,
+  flow,
+}: RepositoryFlowDiagramProps) {
+  const config = repositoryFlowConfig[flow.type];
+
+  return (
+    <section
+      className="project-flow-panel repository-flow-panel"
+      aria-labelledby={id}
+    >
+      <div className="project-flow-heading">
+        <h4 id={id}>
+          <span className="project-flow-slash" aria-hidden="true">
+            /
+          </span>{" "}
+          {config.title}
+        </h4>
+
+        <span className="repository-flow-status">
+          {config.status}
+        </span>
+      </div>
+
+      {config.content}
+
+      <p className="repository-flow-note">
+        {config.note}
+      </p>
+
+      <div className="project-flow-footer">
+        <p className="project-flow-journey">
+          <span>// Flujo principal:</span> {flow.journey}
+        </p>
       </div>
     </section>
   );

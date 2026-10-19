@@ -73,6 +73,16 @@
   .project-flow-outcomes .project-flow-node::before { display: none; }
   .project-flow-outcomes { padding-left: 0; }
   .project-flow-footer { align-items: start; flex-direction: column; }
+  .repository-flow-panel .project-flow-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .repository-flow-panel .project-flow-outcomes {
+    grid-template-columns: 1fr;
+  }
+  .dispatch-flow-integrations {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 420px) {

@@ -9,6 +9,11 @@ export type Project = {
   flowType: "full-stack" | "landing";
 };
 
+export type RepositoryFlow = {
+  type: "mobile-api" | "audio-pipeline" | "dispatch-service";
+  journey: string;
+};
+
 export type RepositoryProject = {
   name: string;
   logoUrl?: string;
@@ -17,6 +22,7 @@ export type RepositoryProject = {
   tools: string[];
   sourceUrl: string;
   sourceType: "repository" | "organization";
+  flow?: RepositoryFlow;
 };
 
 export type StackGroup = {
@@ -115,15 +121,23 @@ export const repositoryProjects: RepositoryProject[] = [
     tools: ["Flutter", "Dart", "Firebase"],
     sourceUrl: "https://github.com/HarrySevenVader/Ruta-5-",
     sourceType: "repository",
+    flow: {
+      type: "mobile-api",
+      journey: "Explorar menú → hacer pedido → valorar plato",
+    },
   },
   {
     name: "ConstrUTEM",
     logoUrl: "/assets/projects/construtem.png",
-    kind: "Organización · Sistema modular",
-    summary: "Conjunto de repositorios para módulos de acceso, inventario, ventas y facturación.",
-    tools: ["TypeScript", "Go", "Docker Compose"],
+    kind: "Proyecto académico · Célula de despacho",
+    summary: "Proyecto colaborativo organizado en tres células. Participé en el frontend de despacho y colaboré en backend para la gestión de despachos y rutas.",
+    tools: ["Next.js", "TypeScript", "Go / Gin", "PostgreSQL"],
     sourceUrl: "https://github.com/Construtem",
     sourceType: "organization",
+    flow: {
+      type: "dispatch-service",
+      journey: "Cotización → calcular despacho → aprobar y ajustar stock → consultar ruta y PDF",
+    },
   },
   {
     name: "Beat MP3 Converter",
@@ -133,6 +147,11 @@ export const repositoryProjects: RepositoryProject[] = [
     tools: ["Next.js", "TypeScript", "FastAPI", "yt-dlp"],
     sourceUrl: "https://github.com/HarrySevenVader/beat-mp3-converter",
     sourceType: "repository",
+    flow: {
+      type: "audio-pipeline",
+      journey:
+        "Pegar URL de YouTube → verificar → elegir calidad → convertir → descargar",
+    },
   },
 ];
 

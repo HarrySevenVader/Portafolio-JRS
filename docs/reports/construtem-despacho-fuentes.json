@@ -1,0 +1,1676 @@
+{
+  "reviewDate": "2026-10-17",
+  "scope": "Archivos textuales consultados; inventario estático orientado al diagrama de despacho.",
+  "repositories": [
+    {
+      "repository": "Construtem/frontend-inventario",
+      "branch": "develop",
+      "reference": "c8dc14c0dc84783cc19c1270d085ea7297001de8",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 94,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-front.yml",
+          "lines": 31,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/.github/workflows/CI-Valida-front.yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 34,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/Dockerfile"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "lines": 23,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/eslint.config.mjs"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "next.config.ts",
+          "lines": 11,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/next.config.ts"
+        },
+        {
+          "path": "package.json",
+          "lines": 35,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/package.json"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/postcss.config.mjs"
+        },
+        {
+          "path": "README_BACKEND_RUTAS.md",
+          "lines": 1,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/README_BACKEND_RUTAS.md"
+        },
+        {
+          "path": "README.md",
+          "lines": 79,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/README.md"
+        },
+        {
+          "path": "src/app/admin/despacho/page.tsx",
+          "lines": 1540,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/page.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/config.ts",
+          "lines": 29,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/config.ts"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/GoogleMapComponent.tsx",
+          "lines": 142,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/GoogleMapComponent.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/GoogleMapsLoader.tsx",
+          "lines": 43,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/GoogleMapsLoader.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/index.ts",
+          "lines": 5,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/index.ts"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/MapView.tsx",
+          "lines": 128,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/MapView.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/README.md",
+          "lines": 159,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/README.md"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/RouteInfo.tsx",
+          "lines": 233,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/RouteInfo.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/MapView/useGoogleMap.tsx",
+          "lines": 39,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/MapView/useGoogleMap.tsx"
+        },
+        {
+          "path": "src/app/admin/despacho/ruta/page.tsx",
+          "lines": 343,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/despacho/ruta/page.tsx"
+        },
+        {
+          "path": "src/app/admin/Gestion-usuarios/page.tsx",
+          "lines": 1843,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/Gestion-usuarios/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inicio/page.tsx",
+          "lines": 1590,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inicio/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/bodega-slot-1/page.tsx",
+          "lines": 3408,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/bodega-slot-1/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/bodega-slot-2/page.tsx",
+          "lines": 3410,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/bodega-slot-2/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/bodega-slot-3/page.tsx",
+          "lines": 3411,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/bodega-slot-3/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/page.tsx",
+          "lines": 665,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/sucursal-slot-1/page.tsx",
+          "lines": 3411,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/sucursal-slot-1/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/sucursal-slot-2/page.tsx",
+          "lines": 3416,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/sucursal-slot-2/page.tsx"
+        },
+        {
+          "path": "src/app/admin/inventario/sucursal-slot-3/page.tsx",
+          "lines": 3410,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/inventario/sucursal-slot-3/page.tsx"
+        },
+        {
+          "path": "src/app/admin/layout.tsx",
+          "lines": 64,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/layout.tsx"
+        },
+        {
+          "path": "src/app/admin/proveedores/gestion-de-proveedores/page.tsx",
+          "lines": 1624,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/proveedores/gestion-de-proveedores/page.tsx"
+        },
+        {
+          "path": "src/app/admin/proveedores/inventario-de-proveedores/page.tsx",
+          "lines": 2274,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/proveedores/inventario-de-proveedores/page.tsx"
+        },
+        {
+          "path": "src/app/admin/sucursales/page.tsx",
+          "lines": 2353,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/admin/sucursales/page.tsx"
+        },
+        {
+          "path": "src/app/auth/callback/AuthCallbackClient.tsx",
+          "lines": 75,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/auth/callback/AuthCallbackClient.tsx"
+        },
+        {
+          "path": "src/app/auth/callback/page.tsx",
+          "lines": 21,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/auth/callback/page.tsx"
+        },
+        {
+          "path": "src/app/layout.tsx",
+          "lines": 15,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/layout.tsx"
+        },
+        {
+          "path": "src/app/page.tsx",
+          "lines": 8,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/app/page.tsx"
+        },
+        {
+          "path": "src/components/admin/header.tsx",
+          "lines": 210,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/components/admin/header.tsx"
+        },
+        {
+          "path": "src/components/admin/sideBar.tsx",
+          "lines": 279,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/src/components/admin/sideBar.tsx"
+        },
+        {
+          "path": "tsconfig.json",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-inventario/blob/develop/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/frontend-facturacion",
+      "branch": "develop",
+      "reference": "def61a0ab5609ae0f1d9afb7d9ccd44ecea38418",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 97,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-front.yml",
+          "lines": 37,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/.github/workflows/CI-Valida-front.yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 27,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 26,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/Dockerfile"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "lines": 17,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/eslint.config.mjs"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "next.config.ts",
+          "lines": 10,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/next.config.ts"
+        },
+        {
+          "path": "package.json",
+          "lines": 32,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/package.json"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/postcss.config.mjs"
+        },
+        {
+          "path": "README.md",
+          "lines": 71,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/README.md"
+        },
+        {
+          "path": "src/app/api/despacho/[id]/route.ts",
+          "lines": 30,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/api/despacho/[id]/route.ts"
+        },
+        {
+          "path": "src/app/api/factura-pdf/[id]/route.ts",
+          "lines": 37,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/api/factura-pdf/[id]/route.ts"
+        },
+        {
+          "path": "src/app/api/mercadopago/route.ts",
+          "lines": 29,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/api/mercadopago/route.ts"
+        },
+        {
+          "path": "src/app/api/quote-preview/[id]/route.ts",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/api/quote-preview/[id]/route.ts"
+        },
+        {
+          "path": "src/app/api/Sumary-data/[id]/route.ts",
+          "lines": 30,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/api/Sumary-data/[id]/route.ts"
+        },
+        {
+          "path": "src/app/checkout/[id]/page.tsx",
+          "lines": 122,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/checkout/[id]/page.tsx"
+        },
+        {
+          "path": "src/app/layout.tsx",
+          "lines": 64,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/layout.tsx"
+        },
+        {
+          "path": "src/app/page.tsx",
+          "lines": 7,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/page.tsx"
+        },
+        {
+          "path": "src/app/services/api.ts",
+          "lines": 17,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/api.ts"
+        },
+        {
+          "path": "src/app/services/EnviarDespacho.ts",
+          "lines": 7,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/EnviarDespacho.ts"
+        },
+        {
+          "path": "src/app/services/FacturaPdf.ts",
+          "lines": 9,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/FacturaPdf.ts"
+        },
+        {
+          "path": "src/app/services/Payment_MercadoPago.ts",
+          "lines": 21,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/Payment_MercadoPago.ts"
+        },
+        {
+          "path": "src/app/services/QuotePreviewService.ts",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/QuotePreviewService.ts"
+        },
+        {
+          "path": "src/app/services/Summary-call.ts",
+          "lines": 7,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/app/services/Summary-call.ts"
+        },
+        {
+          "path": "src/components/Header.tsx",
+          "lines": 314,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/Header.tsx"
+        },
+        {
+          "path": "src/components/MercadoPagoTab.tsx",
+          "lines": 711,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/MercadoPagoTab.tsx"
+        },
+        {
+          "path": "src/components/QuotePreviewTab.tsx",
+          "lines": 267,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/QuotePreviewTab.tsx"
+        },
+        {
+          "path": "src/components/StatusTab.tsx",
+          "lines": 203,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/StatusTab.tsx"
+        },
+        {
+          "path": "src/components/styled-components/checkout.styles.ts",
+          "lines": 66,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/checkout.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/header.styles.ts",
+          "lines": 118,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/header.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/layout.styles.ts",
+          "lines": 10,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/layout.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/mercadoPagoTab.styles.ts",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/mercadoPagoTab.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/progressBar.styles.ts",
+          "lines": 43,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/progressBar.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/stepper.styles.ts",
+          "lines": 32,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/stepper.styles.ts"
+        },
+        {
+          "path": "src/components/styled-components/summaryTab.styles.ts",
+          "lines": 69,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/styled-components/summaryTab.styles.ts"
+        },
+        {
+          "path": "src/components/SummaryTab.tsx",
+          "lines": 276,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/SummaryTab.tsx"
+        },
+        {
+          "path": "src/components/TabContainer.tsx",
+          "lines": 91,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/TabContainer.tsx"
+        },
+        {
+          "path": "src/components/utilities/FormatNumberWithDots.ts",
+          "lines": 8,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/FormatNumberWithDots.ts"
+        },
+        {
+          "path": "src/components/utilities/FormValidator.tsx",
+          "lines": 56,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/FormValidator.tsx"
+        },
+        {
+          "path": "src/components/utilities/getCardType.tsx",
+          "lines": 29,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/getCardType.tsx"
+        },
+        {
+          "path": "src/components/utilities/ParseDate.ts",
+          "lines": 31,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/ParseDate.ts"
+        },
+        {
+          "path": "src/components/utilities/ParseRut.ts",
+          "lines": 16,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/ParseRut.ts"
+        },
+        {
+          "path": "src/components/utilities/tab-wizard/ProgressBar.tsx",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/tab-wizard/ProgressBar.tsx"
+        },
+        {
+          "path": "src/components/utilities/tab-wizard/Stepper.tsx",
+          "lines": 97,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/tab-wizard/Stepper.tsx"
+        },
+        {
+          "path": "src/components/utilities/tab-wizard/TabWizard.tsx",
+          "lines": 27,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/tab-wizard/TabWizard.tsx"
+        },
+        {
+          "path": "src/components/utilities/Validators.ts",
+          "lines": 51,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/src/components/utilities/Validators.ts"
+        },
+        {
+          "path": "tsconfig.json",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-facturacion/blob/develop/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/backend-facturacion",
+      "branch": "develop",
+      "reference": "d75851194a3e4d7c05be11be414cceab222f6232",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 86,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-back.yml",
+          "lines": 33,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/.github/workflows/CI-Valida-back.yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 23,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 28,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/Dockerfile"
+        },
+        {
+          "path": "go.mod",
+          "lines": 61,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/go.mod"
+        },
+        {
+          "path": "handlers/cotizacion.go",
+          "lines": 169,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/handlers/cotizacion.go"
+        },
+        {
+          "path": "handlers/Enviar_datos_despacho.go",
+          "lines": 132,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/handlers/Enviar_datos_despacho.go"
+        },
+        {
+          "path": "handlers/factura_pdf.go",
+          "lines": 74,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/handlers/factura_pdf.go"
+        },
+        {
+          "path": "handlers/post_pago.go",
+          "lines": 51,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/handlers/post_pago.go"
+        },
+        {
+          "path": "instrucciones.txt",
+          "lines": 7,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/instrucciones.txt"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "main.go",
+          "lines": 32,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/main.go"
+        },
+        {
+          "path": "mercadopago/payment.go",
+          "lines": 182,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/mercadopago/payment.go"
+        },
+        {
+          "path": "mercadopago/webhook.go",
+          "lines": 23,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/mercadopago/webhook.go"
+        },
+        {
+          "path": "models/cotizacion.go",
+          "lines": 22,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/cotizacion.go"
+        },
+        {
+          "path": "models/factura_temp.go",
+          "lines": 49,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/factura_temp.go"
+        },
+        {
+          "path": "models/factura.go",
+          "lines": 88,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/factura.go"
+        },
+        {
+          "path": "models/payment_intent.go",
+          "lines": 20,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/payment_intent.go"
+        },
+        {
+          "path": "models/payment_status.go",
+          "lines": 18,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/payment_status.go"
+        },
+        {
+          "path": "models/preview_cotizacion.go",
+          "lines": 32,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/preview_cotizacion.go"
+        },
+        {
+          "path": "models/request.go",
+          "lines": 14,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/request.go"
+        },
+        {
+          "path": "models/Validateforpdf.go",
+          "lines": 60,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/models/Validateforpdf.go"
+        },
+        {
+          "path": "README.md",
+          "lines": 73,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/README.md"
+        },
+        {
+          "path": "routes/routes.go",
+          "lines": 47,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/routes/routes.go"
+        },
+        {
+          "path": "service/generador_factura.go",
+          "lines": 163,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/service/generador_factura.go"
+        },
+        {
+          "path": "service/generador_pdf.go",
+          "lines": 547,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/service/generador_pdf.go"
+        },
+        {
+          "path": "utils/db.go",
+          "lines": 28,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/db.go"
+        },
+        {
+          "path": "utils/estado_pago.go",
+          "lines": 57,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/estado_pago.go"
+        },
+        {
+          "path": "utils/llenar_factura.go",
+          "lines": 184,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/llenar_factura.go"
+        },
+        {
+          "path": "utils/obtener_usuario.go",
+          "lines": 39,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/obtener_usuario.go"
+        },
+        {
+          "path": "utils/status_pago.go",
+          "lines": 56,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/status_pago.go"
+        },
+        {
+          "path": "utils/verificar_pago.go",
+          "lines": 37,
+          "url": "https://github.com/Construtem/backend-facturacion/blob/develop/utils/verificar_pago.go"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/backend-ventas",
+      "branch": "develop",
+      "reference": "0ba7284f2ee31621d67f7ee892fce4ee6805e01e",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 88,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-back.yml",
+          "lines": 33,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/.github/workflows/CI-Valida-back.yml"
+        },
+        {
+          "path": "api/controllers/cotizacion_controller.go",
+          "lines": 443,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/controllers/cotizacion_controller.go"
+        },
+        {
+          "path": "api/controllers/producto_controller.go",
+          "lines": 137,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/controllers/producto_controller.go"
+        },
+        {
+          "path": "api/controllers/sucursales_controller.go",
+          "lines": 25,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/controllers/sucursales_controller.go"
+        },
+        {
+          "path": "api/controllers/ventas_controller.go",
+          "lines": 16,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/controllers/ventas_controller.go"
+        },
+        {
+          "path": "api/database/db.go",
+          "lines": 75,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/database/db.go"
+        },
+        {
+          "path": "api/dtos/cliente.go",
+          "lines": 22,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/dtos/cliente.go"
+        },
+        {
+          "path": "api/dtos/cotizacion.go",
+          "lines": 193,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/dtos/cotizacion.go"
+        },
+        {
+          "path": "api/dtos/producto_inventario.go",
+          "lines": 31,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/dtos/producto_inventario.go"
+        },
+        {
+          "path": "api/dtos/sucursales.go",
+          "lines": 12,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/dtos/sucursales.go"
+        },
+        {
+          "path": "api/handlers/cotizacion_handler.go",
+          "lines": 785,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/handlers/cotizacion_handler.go"
+        },
+        {
+          "path": "api/handlers/producto_inventario_handler.go",
+          "lines": 52,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/handlers/producto_inventario_handler.go"
+        },
+        {
+          "path": "api/handlers/sucursales_handler.go",
+          "lines": 67,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/handlers/sucursales_handler.go"
+        },
+        {
+          "path": "api/handlers/ventas_handler.go",
+          "lines": 25,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/handlers/ventas_handler.go"
+        },
+        {
+          "path": "api/mappers/cliente_usuario.go",
+          "lines": 45,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/mappers/cliente_usuario.go"
+        },
+        {
+          "path": "api/middleware/auth_roles.go",
+          "lines": 54,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/middleware/auth_roles.go"
+        },
+        {
+          "path": "api/middleware/rut.go",
+          "lines": 43,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/middleware/rut.go"
+        },
+        {
+          "path": "api/models/cliente.go",
+          "lines": 50,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/models/cliente.go"
+        },
+        {
+          "path": "api/models/cotizacion.go",
+          "lines": 278,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/models/cotizacion.go"
+        },
+        {
+          "path": "api/models/sucursales.go",
+          "lines": 13,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/models/sucursales.go"
+        },
+        {
+          "path": "api/routes/clientes.go",
+          "lines": 238,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/clientes.go"
+        },
+        {
+          "path": "api/routes/cotizacion_routes.go",
+          "lines": 37,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/cotizacion_routes.go"
+        },
+        {
+          "path": "api/routes/productos_routes.go",
+          "lines": 15,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/productos_routes.go"
+        },
+        {
+          "path": "api/routes/setup_routes.go",
+          "lines": 52,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/setup_routes.go"
+        },
+        {
+          "path": "api/routes/sucursales_routes.go",
+          "lines": 17,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/sucursales_routes.go"
+        },
+        {
+          "path": "api/routes/ventas_routes.go",
+          "lines": 14,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/api/routes/ventas_routes.go"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 16,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 27,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/Dockerfile"
+        },
+        {
+          "path": "go.mod",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/go.mod"
+        },
+        {
+          "path": "handlers/auth_handler.go",
+          "lines": 43,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/handlers/auth_handler.go"
+        },
+        {
+          "path": "instrucciones.txt",
+          "lines": 7,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/instrucciones.txt"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "main.go",
+          "lines": 57,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/main.go"
+        },
+        {
+          "path": "README-MIDDLEWARE-ROLES.md",
+          "lines": 44,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/README-MIDDLEWARE-ROLES.md"
+        },
+        {
+          "path": "README.md",
+          "lines": 73,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/README.md"
+        },
+        {
+          "path": "services/firebase.go",
+          "lines": 42,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/services/firebase.go"
+        },
+        {
+          "path": "test_clientes.http",
+          "lines": 53,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/test_clientes.http"
+        },
+        {
+          "path": "test_cotizaciones.http",
+          "lines": 382,
+          "url": "https://github.com/Construtem/backend-ventas/blob/develop/test_cotizaciones.http"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/infra",
+      "branch": "main",
+      "reference": "b55cf731230111be182f22277a7323a738b40025",
+      "files": [
+        {
+          "path": ".gitmodules",
+          "lines": 25,
+          "url": "https://github.com/Construtem/infra/blob/main/.gitmodules"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 98,
+          "url": "https://github.com/Construtem/infra/blob/main/docker-compose.yml"
+        },
+        {
+          "path": "README.md",
+          "lines": 64,
+          "url": "https://github.com/Construtem/infra/blob/main/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/frontend-ventas",
+      "branch": "develop",
+      "reference": "a2aa571224515e3d38798295f6aeb087da6fad27",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 91,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-front.yml",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/.github/workflows/CI-Valida-front.yml"
+        },
+        {
+          "path": ".vscode/tasks.json",
+          "lines": 17,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/.vscode/tasks.json"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 34,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 30,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/Dockerfile"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "lines": 23,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/eslint.config.mjs"
+        },
+        {
+          "path": "FTU_TOUR_DOCUMENTATION.md",
+          "lines": 139,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/FTU_TOUR_DOCUMENTATION.md"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 34,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "next.config.ts",
+          "lines": 16,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/next.config.ts"
+        },
+        {
+          "path": "package.json",
+          "lines": 34,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/package.json"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/postcss.config.mjs"
+        },
+        {
+          "path": "README.md",
+          "lines": 71,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/README.md"
+        },
+        {
+          "path": "src/app/auth/callback/AuthCallbackClient.tsx",
+          "lines": 75,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/app/auth/callback/AuthCallbackClient.tsx"
+        },
+        {
+          "path": "src/app/auth/callback/page.tsx",
+          "lines": 21,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/app/auth/callback/page.tsx"
+        },
+        {
+          "path": "src/app/layout.tsx",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/app/layout.tsx"
+        },
+        {
+          "path": "src/app/page.tsx",
+          "lines": 97,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/app/page.tsx"
+        },
+        {
+          "path": "src/app/providers.tsx",
+          "lines": 19,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/app/providers.tsx"
+        },
+        {
+          "path": "src/components/Bienvenida.tsx",
+          "lines": 75,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Bienvenida.tsx"
+        },
+        {
+          "path": "src/components/Button.tsx",
+          "lines": 26,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Button.tsx"
+        },
+        {
+          "path": "src/components/Cliente.tsx",
+          "lines": 802,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Cliente.tsx"
+        },
+        {
+          "path": "src/components/Cotizacion.tsx",
+          "lines": 174,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Cotizacion.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/CotizacionBlocked.tsx",
+          "lines": 16,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/CotizacionBlocked.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/CotizacionForm.tsx",
+          "lines": 291,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/CotizacionForm.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/CotizacionHeader.tsx",
+          "lines": 95,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/CotizacionHeader.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/CotizacionModalManager.tsx",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/CotizacionModalManager.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/CotizacionView.tsx",
+          "lines": 134,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/CotizacionView.tsx"
+        },
+        {
+          "path": "src/components/cotizacion/LoaderCotizacion.tsx",
+          "lines": 12,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/cotizacion/LoaderCotizacion.tsx"
+        },
+        {
+          "path": "src/components/CotizacionesCreadas.tsx",
+          "lines": 47,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/CotizacionesCreadas.tsx"
+        },
+        {
+          "path": "src/components/FTUTour.tsx",
+          "lines": 435,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/FTUTour.tsx"
+        },
+        {
+          "path": "src/components/Header.tsx",
+          "lines": 143,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Header.tsx"
+        },
+        {
+          "path": "src/components/HistorialCotizaciones.tsx",
+          "lines": 74,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/HistorialCotizaciones.tsx"
+        },
+        {
+          "path": "src/components/Loader.tsx",
+          "lines": 14,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Loader.tsx"
+        },
+        {
+          "path": "src/components/Modal/ClienteDetalleModal.tsx",
+          "lines": 146,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/ClienteDetalleModal.tsx"
+        },
+        {
+          "path": "src/components/Modal/ClienteModal.tsx",
+          "lines": 244,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/ClienteModal.tsx"
+        },
+        {
+          "path": "src/components/Modal/CotizacionDetalleModal.tsx",
+          "lines": 157,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/CotizacionDetalleModal.tsx"
+        },
+        {
+          "path": "src/components/Modal/Modal.tsx",
+          "lines": 29,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/Modal.tsx"
+        },
+        {
+          "path": "src/components/Modal/ModalsParts.tsx",
+          "lines": 17,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/ModalsParts.tsx"
+        },
+        {
+          "path": "src/components/Modal/ProductoModal.tsx",
+          "lines": 310,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Modal/ProductoModal.tsx"
+        },
+        {
+          "path": "src/components/NumberIcon.tsx",
+          "lines": 10,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/NumberIcon.tsx"
+        },
+        {
+          "path": "src/components/PanelTotals.tsx",
+          "lines": 159,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/PanelTotals.tsx"
+        },
+        {
+          "path": "src/components/PanelTotals/PanelTotalsNoProducts.tsx",
+          "lines": 16,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/PanelTotals/PanelTotalsNoProducts.tsx"
+        },
+        {
+          "path": "src/components/PanelTotalsContainer.tsx",
+          "lines": 198,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/PanelTotalsContainer.tsx"
+        },
+        {
+          "path": "src/components/ProductTable.tsx",
+          "lines": 167,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/ProductTable.tsx"
+        },
+        {
+          "path": "src/components/TablaCotizaciones.tsx",
+          "lines": 219,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/TablaCotizaciones.tsx"
+        },
+        {
+          "path": "src/components/TourRestartButton.tsx",
+          "lines": 44,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/TourRestartButton.tsx"
+        },
+        {
+          "path": "src/components/ValidadorRut.tsx",
+          "lines": 88,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/ValidadorRut.tsx"
+        },
+        {
+          "path": "src/components/Vendedor.tsx",
+          "lines": 37,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/components/Vendedor.tsx"
+        },
+        {
+          "path": "src/contexts/CotizacionFlow.tsx",
+          "lines": 323,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/contexts/CotizacionFlow.tsx"
+        },
+        {
+          "path": "src/hooks/useAddressCheck.ts",
+          "lines": 97,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/hooks/useAddressCheck.ts"
+        },
+        {
+          "path": "src/hooks/useProductos.ts",
+          "lines": 74,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/hooks/useProductos.ts"
+        },
+        {
+          "path": "src/hooks/useStockSucursal.ts",
+          "lines": 104,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/hooks/useStockSucursal.ts"
+        },
+        {
+          "path": "src/hooks/useSucursales.ts",
+          "lines": 30,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/hooks/useSucursales.ts"
+        },
+        {
+          "path": "src/lib/googleMaps.ts",
+          "lines": 73,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/lib/googleMaps.ts"
+        },
+        {
+          "path": "src/mocks/mocksDatos.ts",
+          "lines": 226,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/mocks/mocksDatos.ts"
+        },
+        {
+          "path": "src/services/apiService.ts",
+          "lines": 485,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/services/apiService.ts"
+        },
+        {
+          "path": "src/services/apiServices.ts",
+          "lines": 703,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/services/apiServices.ts"
+        },
+        {
+          "path": "src/utils/helpers/productMapper.ts",
+          "lines": 39,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/src/utils/helpers/productMapper.ts"
+        },
+        {
+          "path": "tailwind.config.js",
+          "lines": 16,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/tailwind.config.js"
+        },
+        {
+          "path": "tsconfig.json",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-ventas/blob/develop/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/Mockups",
+      "branch": "main",
+      "reference": "c4c47af3cb31be63dc6719bddff1150ea96d7bf3",
+      "files": [
+        {
+          "path": "README.md",
+          "lines": 7,
+          "url": "https://github.com/Construtem/Mockups/blob/main/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/frontend-login",
+      "branch": "develop",
+      "reference": "fcacb94a4803ba596b877a6635922060d1a12f0b",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 89,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-front.yml",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/.github/workflows/CI-Valida-front.yml"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 32,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 26,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/Dockerfile"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "lines": 17,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/eslint.config.mjs"
+        },
+        {
+          "path": "firebase.js",
+          "lines": 20,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/firebase.js"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "next.config.ts",
+          "lines": 8,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/next.config.ts"
+        },
+        {
+          "path": "package.json",
+          "lines": 32,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/package.json"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/postcss.config.mjs"
+        },
+        {
+          "path": "README.md",
+          "lines": 72,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/README.md"
+        },
+        {
+          "path": "src/app/auth/login/page.tsx",
+          "lines": 6,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/app/auth/login/page.tsx"
+        },
+        {
+          "path": "src/app/layout.tsx",
+          "lines": 15,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/app/layout.tsx"
+        },
+        {
+          "path": "src/app/maintenance/page.tsx",
+          "lines": 7,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/app/maintenance/page.tsx"
+        },
+        {
+          "path": "src/app/page.tsx",
+          "lines": 8,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/app/page.tsx"
+        },
+        {
+          "path": "src/components/auth/loginForm.tsx",
+          "lines": 494,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/components/auth/loginForm.tsx"
+        },
+        {
+          "path": "src/components/maintenance/maintenance.tsx",
+          "lines": 42,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/src/components/maintenance/maintenance.tsx"
+        },
+        {
+          "path": "tsconfig.json",
+          "lines": 28,
+          "url": "https://github.com/Construtem/frontend-login/blob/develop/tsconfig.json"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/backend-inventario",
+      "branch": "develop",
+      "reference": "7ef6eec05786356be29d04de48e29e9d73ba6ae3",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 86,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-back.yml",
+          "lines": 32,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/.github/workflows/CI-Valida-back.yml"
+        },
+        {
+          "path": "api/Controllers/ControllerCamion.go",
+          "lines": 64,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerCamion.go"
+        },
+        {
+          "path": "api/Controllers/ControllerCliente.go",
+          "lines": 81,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerCliente.go"
+        },
+        {
+          "path": "api/Controllers/ControllerDespacho.go",
+          "lines": 733,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerDespacho.go"
+        },
+        {
+          "path": "api/Controllers/ControllerDirCliente.go",
+          "lines": 59,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerDirCliente.go"
+        },
+        {
+          "path": "api/Controllers/ControllerProducto.go",
+          "lines": 68,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerProducto.go"
+        },
+        {
+          "path": "api/Controllers/ControllerProductosDespacho.go",
+          "lines": 185,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerProductosDespacho.go"
+        },
+        {
+          "path": "api/Controllers/ControllerProveedor.go",
+          "lines": 51,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerProveedor.go"
+        },
+        {
+          "path": "api/Controllers/ControllerRol.go",
+          "lines": 58,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerRol.go"
+        },
+        {
+          "path": "api/Controllers/ControllerStockProveedor.go",
+          "lines": 90,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerStockProveedor.go"
+        },
+        {
+          "path": "api/Controllers/ControllerStockSucursal.go",
+          "lines": 93,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerStockSucursal.go"
+        },
+        {
+          "path": "api/Controllers/ControllerSucursal.go",
+          "lines": 65,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerSucursal.go"
+        },
+        {
+          "path": "api/Controllers/ControllerTipoCamion.go",
+          "lines": 54,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerTipoCamion.go"
+        },
+        {
+          "path": "api/Controllers/ControllerTipoCliente.go",
+          "lines": 55,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerTipoCliente.go"
+        },
+        {
+          "path": "api/Controllers/ControllerTipoSucursal.go",
+          "lines": 44,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerTipoSucursal.go"
+        },
+        {
+          "path": "api/Controllers/ControllerUsuario.go",
+          "lines": 55,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/ControllerUsuario.go"
+        },
+        {
+          "path": "api/Controllers/pdf.go",
+          "lines": 419,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Controllers/pdf.go"
+        },
+        {
+          "path": "api/db/db.go",
+          "lines": 53,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/db/db.go"
+        },
+        {
+          "path": "api/Handlers/HandlerCamion.go",
+          "lines": 115,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerCamion.go"
+        },
+        {
+          "path": "api/Handlers/HandlerCliente.go",
+          "lines": 123,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerCliente.go"
+        },
+        {
+          "path": "api/Handlers/HandlerDespacho.go",
+          "lines": 292,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerDespacho.go"
+        },
+        {
+          "path": "api/Handlers/HandlerDirCliente.go",
+          "lines": 106,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerDirCliente.go"
+        },
+        {
+          "path": "api/Handlers/HandlerDistancia.go",
+          "lines": 221,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerDistancia.go"
+        },
+        {
+          "path": "api/Handlers/HandlerProducto.go",
+          "lines": 77,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerProducto.go"
+        },
+        {
+          "path": "api/Handlers/HandlerProductosDespacho.go",
+          "lines": 165,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerProductosDespacho.go"
+        },
+        {
+          "path": "api/Handlers/HandlerProveedor.go",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerProveedor.go"
+        },
+        {
+          "path": "api/Handlers/HandlerRol.go",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerRol.go"
+        },
+        {
+          "path": "api/Handlers/HandlerStockProveedor.go",
+          "lines": 202,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerStockProveedor.go"
+        },
+        {
+          "path": "api/Handlers/HandlerStockSucursal.go",
+          "lines": 128,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerStockSucursal.go"
+        },
+        {
+          "path": "api/Handlers/HandlerSucursal.go",
+          "lines": 123,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerSucursal.go"
+        },
+        {
+          "path": "api/Handlers/HandlerTipoCamion.go",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerTipoCamion.go"
+        },
+        {
+          "path": "api/Handlers/HandlerTipoCliente.go",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerTipoCliente.go"
+        },
+        {
+          "path": "api/Handlers/HandlerTipoSucursal.go",
+          "lines": 96,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerTipoSucursal.go"
+        },
+        {
+          "path": "api/Handlers/HandlerUsuario.go",
+          "lines": 77,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Handlers/HandlerUsuario.go"
+        },
+        {
+          "path": "api/Models/migracion.go",
+          "lines": 35,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Models/migracion.go"
+        },
+        {
+          "path": "api/Models/modelos.go",
+          "lines": 300,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Models/modelos.go"
+        },
+        {
+          "path": "api/Routes/register.go",
+          "lines": 144,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/api/Routes/register.go"
+        },
+        {
+          "path": "config/config.go",
+          "lines": 22,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/config/config.go"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 25,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 28,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/Dockerfile"
+        },
+        {
+          "path": "go.mod",
+          "lines": 97,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/go.mod"
+        },
+        {
+          "path": "handlers/auth_handler.go",
+          "lines": 54,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/handlers/auth_handler.go"
+        },
+        {
+          "path": "IMPLEMENTACION_RUTAS.md",
+          "lines": 235,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/IMPLEMENTACION_RUTAS.md"
+        },
+        {
+          "path": "instrucciones.txt",
+          "lines": 7,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/instrucciones.txt"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "main.go",
+          "lines": 69,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/main.go"
+        },
+        {
+          "path": "README_BACKEND_RUTAS.md",
+          "lines": 311,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/README_BACKEND_RUTAS.md"
+        },
+        {
+          "path": "README.md",
+          "lines": 75,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/README.md"
+        },
+        {
+          "path": "services/firebase.go",
+          "lines": 42,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/services/firebase.go"
+        },
+        {
+          "path": "services/google_maps.go",
+          "lines": 140,
+          "url": "https://github.com/Construtem/backend-inventario/blob/develop/services/google_maps.go"
+        }
+      ]
+    },
+    {
+      "repository": "Construtem/backend-login",
+      "branch": "develop",
+      "reference": "48756e578268ec117be4dc6d01cd045c02db8bfa",
+      "files": [
+        {
+          "path": ".github/workflows/CI-CD-staging.yml",
+          "lines": 88,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/.github/workflows/CI-CD-staging.yml"
+        },
+        {
+          "path": ".github/workflows/CI-Valida-back.yml",
+          "lines": 33,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/.github/workflows/CI-Valida-back.yml"
+        },
+        {
+          "path": "config/config.go",
+          "lines": 22,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/config/config.go"
+        },
+        {
+          "path": "db/postgres.go",
+          "lines": 36,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/db/postgres.go"
+        },
+        {
+          "path": "docker-compose.yml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/docker-compose.yml"
+        },
+        {
+          "path": "Dockerfile",
+          "lines": 27,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/Dockerfile"
+        },
+        {
+          "path": "go.mod",
+          "lines": 89,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/go.mod"
+        },
+        {
+          "path": "handlers/auth_handler.go",
+          "lines": 62,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/handlers/auth_handler.go"
+        },
+        {
+          "path": "instrucciones.txt",
+          "lines": 7,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/instrucciones.txt"
+        },
+        {
+          "path": "k8s/deployment.yaml",
+          "lines": 35,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/k8s/deployment.yaml"
+        },
+        {
+          "path": "k8s/ingress.yaml",
+          "lines": 24,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/k8s/ingress.yaml"
+        },
+        {
+          "path": "k8s/service.yaml",
+          "lines": 13,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/k8s/service.yaml"
+        },
+        {
+          "path": "main.go",
+          "lines": 41,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/main.go"
+        },
+        {
+          "path": "README.md",
+          "lines": 75,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/README.md"
+        },
+        {
+          "path": "services/firebase.go",
+          "lines": 41,
+          "url": "https://github.com/Construtem/backend-login/blob/develop/services/firebase.go"
+        }
+      ]
+    }
+  ]
+}

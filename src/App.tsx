@@ -3,9 +3,10 @@ import { Footer } from "./components/Footer";
 import { Home } from "./sections/Home";
 import { Projects } from "./sections/Projects";
 import { StackSection } from "./sections/StackSection";
+import { SoftwareStackSection } from "./sections/SoftwareStackSection";
 import { Experience } from "./sections/Experience";
 import { Contact } from "./sections/Contact";
-import { dataStack, developmentStack } from "./data/portfolio";
+import { dataStack } from "./data/portfolio";
 
 function App() {
   return (
@@ -16,14 +17,7 @@ function App() {
       <main id="contenido">
         <Home />
         <Projects />
-        <StackSection
-          id="desarrollo"
-          number="03"
-          eyebrow="Stack de desarrollo"
-          title="Herramientas para construir."
-          description="Tecnologías que utilizo para crear interfaces, conectar servicios y dar forma a productos web."
-          groups={developmentStack}
-        />
+        <SoftwareStackSection />
         <StackSection
           id="datos"
           number="04"

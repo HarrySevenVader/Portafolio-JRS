@@ -1168,3 +1168,91 @@
       0 0 22px 6px rgb(57 255 20 / 70%);
   }
 }
+
+/* Diagramas de proyectos en repositorio. */
+.repository-flow-panel {
+  --project-accent: #38bdf8;
+  --project-glow: rgb(56 189 248 / 13%);
+}
+
+.repository-flow-panel .project-flow-heading {
+  flex-wrap: wrap;
+}
+
+.repository-flow-panel .project-flow-slash {
+  color: #036b89;
+}
+
+.repository-flow-status {
+  padding: 5px 8px;
+  border: 1px solid rgb(56 189 248 / 35%);
+  border-radius: 4px;
+  background: rgb(56 189 248 / 10%);
+  color: #036b89;
+  line-height: 1.4;
+}
+
+.repository-flow-panel .project-flow-node span {
+  overflow-wrap: anywhere;
+}
+
+.repository-flow-note {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-family: var(--font-meta);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+/* La célula de despacho conserva el marco común de los repositorios. */
+.dispatch-flow-logic {
+  display: grid;
+  gap: 5px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-left: 2px solid var(--project-accent);
+  background: rgb(56 189 248 / 5%);
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.dispatch-flow-logic strong {
+  color: var(--ink);
+  font-family: var(--font-meta);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dispatch-flow-integrations {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.dispatch-flow-integrations > div {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: rgb(255 255 255 / 55%);
+}
+
+.dispatch-flow-integrations dt {
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-family: var(--font-meta);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.dispatch-flow-integrations dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
