@@ -25,11 +25,6 @@ export type RepositoryProject = {
   flow?: RepositoryFlow;
 };
 
-export type StackGroup = {
-  name: string;
-  tools: string[];
-};
-
 export type Role = {
   period: string;
   title: string;
@@ -45,6 +40,7 @@ export type Certification = {
 };
 
 export type Practice = {
+  icon: "web" | "mobile" | "data";
   title: string;
   description: string;
 };
@@ -56,7 +52,7 @@ export const links = {
 };
 
 export const profile = {
-  degree: "Ingeniero en Informática",
+  degree: "Ingeniería en Informática",
   status: "Titulado",
   university: "Universidad Tecnológica Metropolitana",
   universityShortName: "UTEM",
@@ -81,10 +77,9 @@ export const certifications: Certification[] = [
 
 // Añade aquí nuevas actividades; la numeración del panel se genera automáticamente.
 export const practices: Practice[] = [
-  { title: "Desarrollo Web Full Stack", description: "Diseño y desarrollo soluciones web completas, desde interfaces claras y responsivas hasta APIs, lógica de negocio y bases de datos. Construyo productos pensados para funcionar de forma estable, escalar y quedar listos para producción en la nube." },
-  { title: "Desarrollo Mobile", description: "Creo aplicaciones móviles simples de usar, visualmente cuidadas y enfocadas en resolver necesidades concretas. Priorizo una navegación fluida, una experiencia intuitiva y una integración sólida con servicios y datos." },
-  { title: "Automatización de Procesos", description: "Identifico tareas repetitivas y las convierto en procesos automáticos que reducen tiempos, errores y trabajo manual." },
-  { title: "Análisis de datos", description: "Trabajo con datos desde su origen: los extraigo, limpio, transformo y válido para convertirlos en información confiable. A partir de ellos identifico patrones, oportunidades e insights que apoyan mejores decisiones." },
+  { icon: "web", title: "Desarrollo Web", description: "Desarrollo aplicaciones web de extremo a extremo, desde interfaces responsivas hasta APIs REST, lógica de negocio y bases de datos. Conecto frontend y backend, integro servicios externos y organizo componentes reutilizables para facilitar el mantenimiento. Utilizo Git para gestionar versiones y preparo el despliegue en la nube, considerando las necesidades del usuario y los requisitos de cada proyecto." },
+  { icon: "mobile", title: "Desarrollo Mobile", description: "Desarrollo aplicaciones móviles con Flutter, trabajando en la construcción de interfaces, navegación y manejo de estado. Integro APIs y servicios para conectar las funcionalidades de la aplicación con sus datos. Presto atención a la organización del código, la reutilización de widgets y los estados de carga y error, buscando una experiencia clara y consistente entre pantallas." },
+  { icon: "data", title: "Automatización y Análisis de Datos", description: "Automatizo tareas repetitivas e integro fuentes de información mediante scripts y flujos de trabajo. Utilizo Python, SQL y Excel para extraer, limpiar, transformar y validar datos antes de analizarlos. Desarrollo dashboards en Power BI y Looker Studio para visualizar KPIs, explorar tendencias y comunicar resultados que ayuden a comprender el desempeño de un proceso e identificar oportunidades de mejora." },
 ];
 
 // Solo proyectos con un sitio público activo.
@@ -153,18 +148,6 @@ export const repositoryProjects: RepositoryProject[] = [
         "Pegar URL de YouTube → verificar → elegir calidad → convertir → descargar",
     },
   },
-];
-
-export const developmentStack: StackGroup[] = [
-  { name: "Interfaz", tools: ["React", "TypeScript", "JavaScript", "HTML", "CSS"] },
-  { name: "Servicios", tools: ["Node.js", "Go", "APIs REST"] },
-  { name: "Persistencia y entrega", tools: ["PostgreSQL", "MySQL", "Git", "GitHub"] },
-];
-
-export const dataStack: StackGroup[] = [
-  { name: "Preparación", tools: ["Python", "SQL", "Excel"] },
-  { name: "Análisis", tools: ["Power BI", "BigQuery", "Visualización"] },
-  { name: "Procesos", tools: ["Calidad de datos", "Automatización", "Reportes BI"] },
 ];
 
 export const roles: Role[] = [

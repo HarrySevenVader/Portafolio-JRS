@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { SectionHeading } from "../components/SectionHeading";
 import {
   ProjectFlowDiagram,
@@ -166,16 +166,28 @@ function RepositoryProjects() {
   );
 }
 
-function ProjectPageContent({ pageIndex }: { pageIndex: ProjectPage }) {
+const ProjectPageContent = memo(function ProjectPageContent({
+  pageIndex,
+}: {
+  pageIndex: ProjectPage;
+}) {
   const page = pageCopy[pageIndex];
 
   return (
     <>
-      <SectionHeading number="02" eyebrow={page.eyebrow} title={page.title} description={page.description} />
-      {pageIndex === 0 ? <PublishedProjects /> : <RepositoryProjects />}
+      <SectionHeading
+        number="02"
+        eyebrow={page.eyebrow}
+        title={page.title}
+        description={page.description}
+      />
+
+      {pageIndex === 0
+        ? <PublishedProjects />
+        : <RepositoryProjects />}
     </>
   );
-}
+});
 
 export function Projects() {
   const [activePage, setActivePage] = useState<ProjectPage>(0);

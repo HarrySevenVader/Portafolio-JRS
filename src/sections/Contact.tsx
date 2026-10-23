@@ -6,7 +6,7 @@ export function Contact() {
     <section className="content-section contact-section" id="contacto">
       <div className="container">
         <SectionHeading
-          number="06"
+          number="05"
           eyebrow="Contacto"
           title="Conversemos."
           description="Si tienes una idea, una oportunidad o una pregunta sobre mi trabajo, puedes escribirme."

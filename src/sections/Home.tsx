@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { certifications, links, practices, profile } from "../data/portfolio";
 import Portrait from "../styles/assets/e2.jpeg";
 import Example from "../Example";
+import { DrawLineText as DrawLineTextTitulos } from "../components/DrawLineText-Titulos";
+import { PracticeIcon } from "../components/PracticeIcon";
 
 const pipelineSteps = ["PUSH", "CHECKOUT", "NPM CI", "LINT + TEST", "BUILD · TS + VITE"];
 
@@ -21,6 +23,27 @@ export function Home() {
     return () => window.clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const header = document.querySelector(".site-header");
+    const home = document.getElementById("inicio");
+
+    if (!header || !home) return;
+
+    const updateOverlap = () => {
+      home.style.setProperty(
+        "--home-header-overlap",
+        `${header.getBoundingClientRect().height}px`,
+      );
+    };
+
+    updateOverlap();
+
+    const observer = new ResizeObserver(updateOverlap);
+    observer.observe(header);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="home-section" id="inicio" aria-labelledby="home-title">
       <div className="home-matrix-background" aria-hidden="true">
@@ -30,7 +53,21 @@ export function Home() {
         <div className="home-grid">
           <div className="home-copy">
             <p className="overline">Portafolio personal / 2026</p>
-            <h1 id="home-title">Software claro.<br /><em>Datos que sirven.</em></h1>
+            <h1 id="home-title">
+              <DrawLineTextTitulos
+                text="Software claro."
+                accent={{ text: "claro.", color: "#ffffff" }}
+                strokeWidth={0.7}
+              />
+              <em>
+                <DrawLineTextTitulos
+                  text="Datos que sirven."
+                  accent={{ text: "sirven.", color: "var(--brand-accent)" }}
+                  strokeWidth={0.7}
+                  delay={0.2}
+                />
+              </em>
+            </h1>
             <p className="home-intro">
               Me encantan los videojuegos 🎮 y resolver problemas, creando soluciones eficientes y modernas para todo tipo de proyectos 💻. Experiencia Full-Stack Web & Móvil, APIs y Análisis de Datos 📱.
             </p>
@@ -127,17 +164,45 @@ export function Home() {
             <h2 id="profile-heading">Pulso <em>propio.</em></h2>
             <p className="profile-lead">
               <strong>Probar, caer, ajustar, seguir.</strong>
-              Ese ritmo conecta mi trabajo en software con los videojuegos, el deporte, la música y el skate.
+              Desarrollo aplicaciones web y móviles, integrando interfaces, servicios y datos. Me interesa entender lo que una persona necesita y convertirlo en una solución que pueda usar.
+              Probar, caer, ajustar, seguir. Ese ritmo conecta mi trabajo en software con los videojuegos, el deporte, la música y el skate.
             </p>
 
             <dl className="profile-facts">
-              <div><dt>Título</dt><dd>{profile.degree}</dd></div>
+              <div><dt>Carrera</dt><dd>{profile.degree}</dd></div>
               <div><dt>Estado</dt><dd>{profile.status}</dd></div>
               <div><dt>Institución</dt><dd>{profile.university} ({profile.universityShortName})</dd></div>
               <div><dt>Período</dt><dd>{profile.period}</dd></div>
             </dl>
 
-            <div className="profile-certifications">
+            <div className="profile-next-step">
+              <p className="profile-next-step-label">Próximo paso</p>
+              <p className="profile-next-step-description">
+                Busco integrarme a un equipo donde pueda aportar en proyectos escalables, seguir creciendo con desafíos reales y profundizar mas en estas areas y mucho mas.
+              </p>
+            </div>
+
+          </section>
+
+          <section className="practice-list" aria-labelledby="practice-heading">
+            <h2 className="section-label" id="practice-heading">Lo que construyo</h2>
+            <ol className="practice-rows">
+              {practices.map((practice, index) => (
+                <li className="practice-row" key={practice.title}>
+                  <span className="practice-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="practice-icon">
+                    <PracticeIcon type={practice.icon} />
+                  </span>
+                  <div className="practice-content">
+                    <h3 className="practice-title">{practice.title}</h3>
+                    <p className="practice-description">{practice.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <div className="profile-certifications">
               <div className="profile-certifications-heading">
                 <h3>Certificaciones</h3>
                 {/*<span>{String(certifications.length).padStart(2, "0")}</span>*/}
@@ -162,26 +227,7 @@ export function Home() {
                 <p className="certification-empty">Mis certificados verificables se incorporarán aquí.</p>
               )}
             </div>
-          </section>
 
-          <section className="practice-list" aria-labelledby="practice-heading">
-            <span className="practice-leds" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-              <span />
-            </span>
-            <h2 className="section-label" id="practice-heading">A qué me dedico</h2>
-            <ol className="practice-rows">
-              {practices.map((practice, index) => (
-                <li className="practice-row" key={practice.title}>
-                  <span className="practice-number">{String(index + 1).padStart(2, "0")}</span>
-                  <h3 className="practice-title">{practice.title}</h3>
-                  <p className="practice-description">{practice.description}</p>
-                </li>
-              ))}
-            </ol>
-          </section>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { memo, useEffect, useRef, useState, type CSSProperties } from "react";
 import "./styles/example.css";
 
 // Adaptado de Uiverse.io por whoisyourdeadie:
@@ -74,7 +74,7 @@ function getColumnCharacters(index: number): string {
   return columnNumber % 2 === 0 ? CHARACTERS.even : CHARACTERS.odd;
 }
 
-export default function Example() {
+const Example = memo(function Example() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [columnCount, setColumnCount] = useState<number>(COLUMN_TIMINGS.length);
 
@@ -118,4 +118,6 @@ export default function Example() {
       </div>
     </div>
   );
-}
+});
+
+export default Example;

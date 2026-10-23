@@ -6,7 +6,7 @@ export function Experience() {
     <section className="content-section" id="experiencia">
       <div className="container">
         <SectionHeading
-          number="05"
+          number="04"
           eyebrow="Experiencia profesional"
           title="Trabajo en contexto."
           description="Experiencias recientes donde datos, procesos y herramientas digitales se encontraron."
