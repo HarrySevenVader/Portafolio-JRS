@@ -26,10 +26,22 @@ export type RepositoryProject = {
 };
 
 export type Role = {
-  period: string;
-  title: string;
+  id: string;
   organization: string;
+  logoUrl: string;
+  title: string;
+  department?: string;
+  period: string;
+  duration: string;
+  employmentType: string;
   description: string;
+  responsibilities: string[];
+  achievements: {
+    id: string;
+    value: string;
+    label: string;
+    detail: string;
+  }[];
 };
 
 export type Certification = {
@@ -46,6 +58,7 @@ export type Practice = {
 };
 
 export const links = {
+  cv: "/assets/files/Jarol_Riquelme_CV.pdf",
   email: "mailto:jriquelme.harrysev@gmail.com",
   github: "https://github.com/HarrySevenVader",
   linkedin: "https://www.linkedin.com/in/jarol-riquelme-santiba%C3%B1ez-71bb37338/",
@@ -152,15 +165,68 @@ export const repositoryProjects: RepositoryProject[] = [
 
 export const roles: Role[] = [
   {
-    period: "May — Ago 2026",
-    title: "Data Excellence · LocalData",
-    organization: "Innovation for Society SpA",
-    description: "Calidad y enriquecimiento de datos operacionales. Optimicé una herramienta interna en Python y reduje su tiempo de ejecución de 25 a 15 minutos.",
+    id: "localdata",
+    organization: "LocalData",
+    logoUrl: "/assets/experience/localdata-logo.jpg",
+    title: "Analista de Calidad de Datos",
+    department: "Data Excellence",
+    period: "May — Jul 2026",
+    duration: "3 meses",
+    employmentType: "Contrato a plazo fijo",
+    description:
+      "Empresa de inteligencia de mercado especializada en el canal tradicional. Analiza ventas de tiendas de barrio para ayudar a fabricantes, distribuidores y retailers a comprender el consumo y orientar sus decisiones comerciales.",
+    responsibilities: [
+      "Monitoreo de clasificación, cobertura y completitud en 30 categorías de productos.",
+      "Cruce de catálogo maestro con 60 días de ventas mediante Python y SQL en PostgreSQL.",
+      "Detección de inconsistencias antes de alimentar reportes en Power BI.",
+    ],
+    achievements: [
+      {
+        id: "processing-time",
+        value: "-40%",
+        label: "Tiempo de procesamiento",
+        detail:
+          "De 25 a 15 minutos, optimizando en Python la identificación y clasificación de nuevos productos.",
+      },
+      {
+        id: "ean-validation",
+        value: "-89%",
+        label: "Casos con búsqueda manual",
+        detail:
+          "Automatización de la validación de códigos EAN en fuentes web, con un flujo reutilizable.",
+      },
+    ],
   },
   {
-    period: "Ago 2025 — Ene 2026",
+    id: "sodimac",
+    organization: "Sodimac",
+    logoUrl: "/assets/experience/sodimac-logo.png",
     title: "Analista de Datos Maestros",
-    organization: "Sodimac · Práctica profesional",
-    description: "Trabajé en calidad de datos e información comercial para e-commerce, con automatizaciones en Python y procesamiento de atributos a gran escala.",
+    period: "Ago 2025 — Ene 2026",
+    duration: "6 meses",
+    employmentType: "Práctica profesional",
+    description:
+      "Empresa de retail del Grupo Falabella especializada en mejoramiento del hogar y construcción. Integra tiendas físicas y comercio electrónico para atender a hogares, profesionales y empresas con productos y servicios para sus proyectos.",
+    responsibilities: [
+      "Limpieza, transformación y validación de datos maestros en Excel y Power Query.",
+      "Validación y corrección de información comercial preprocesada por IA para STEP PIM.",
+      "Preparación y validación de datos mediante SQL en BigQuery para dashboards en Looker Studio.",
+    ],
+    achievements: [
+      {
+        id: "commercial-attributes",
+        value: "+59.000",
+        label: "Atributos comerciales",
+        detail:
+          "Disponibles en STEP PIM para Black Friday, tras validar y corregir inconsistencias.",
+      },
+      {
+        id: "packaging-certificates",
+        value: "≈90%",
+        label: "Reducción del procesamiento",
+        detail:
+          "Automatización con Python de certificados de embalaje en lotes de 500 a 740 archivos.",
+      },
+    ],
   },
 ];

@@ -136,6 +136,7 @@ const cloudTechnologyGroups: TechnologyGroup[] = [
     description: "Vercel, Render y Supabase en Gustito; Google Cloud en datos y en la infraestructura académica.",
     technologies: [
       { id: "vercel", title: "Vercel", subtitle: "Frontend", icon: "vercel" },
+      { id: "netlify", title: "Netlify", subtitle: "Frontend", icon: "netlify" },
       { id: "render", title: "Render", subtitle: "Backend", icon: "render" },
       { id: "supabase", title: "Supabase", subtitle: "PostgreSQL gestionado", icon: "supabase" },
       { id: "googlecloud", title: "Google Cloud", subtitle: "BigQuery · GKE", icon: "googlecloud" },

@@ -1,0 +1,332 @@
+/* Superficie y encabezado de la sección */
+.experience-section {
+  background: var(--page);
+  font-family: var(--font-body);
+}
+
+.experience-section .section-heading {
+  grid-template-columns: minmax(0, 1.5fr) minmax(250px, .7fr);
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.experience-section .section-heading h2 {
+  max-width: none;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4.1rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.055em;
+}
+
+.experience-section .section-heading h2 em {
+  color: var(--brand-accent);
+  font-style: italic;
+}
+
+.experience-section .section-description {
+  padding-left: 24px;
+  border-left: 4px solid var(--brand-accent);
+  font-size: .94rem;
+  line-height: 1.65;
+}
+
+/* Tarjetas */
+.experience-cards {
+  display: grid;
+  gap: 22px;
+}
+
+.experience-card {
+  --experience-columns:
+    minmax(0, .85fr)
+    minmax(0, 1.35fr)
+    minmax(0, 1fr);
+  --experience-gap: 24px;
+
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.experience-card-header,
+.experience-card-body {
+  display: grid;
+  grid-template-columns: var(--experience-columns);
+  gap: var(--experience-gap);
+}
+
+.experience-card-header {
+  align-items: center;
+}
+
+.experience-card-header > *,
+.experience-card-body > * {
+  min-width: 0;
+}
+
+/* Logos: encuadre para los archivos cuadrados actuales */
+.experience-brand {
+  width: min(100%, 200px);
+  height: 64px;
+  overflow: hidden;
+}
+
+.experience-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Cargo y período */
+.experience-position {
+  padding-left: var(--experience-gap);
+}
+
+.experience-position h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.12rem, 1.55vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
+}
+
+.experience-department {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.experience-tenure {
+  padding-left: var(--experience-gap);
+  border-left: 1px solid var(--line);
+}
+
+.experience-dates {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.experience-contract {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.6;
+}
+
+/* Empresa, funciones y resultados */
+.experience-card-body {
+  grid-template-areas:
+    "company functions functions"
+    "company results results";
+  align-items: start;
+  row-gap: 22px;
+  margin-top: 24px;
+  padding-top: 24px;
+}
+
+.experience-company { grid-area: company; }
+.experience-functions { grid-area: functions; }
+.experience-results { grid-area: results; }
+
+.experience-block-title {
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: .68rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.experience-company-description {
+  max-width: 28ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.65;
+  /* text-align: justify; */
+}
+
+.experience-functions,
+.experience-results {
+  padding-left: var(--experience-gap);
+  border-left: 1px solid var(--line);
+}
+
+/* Funciones */
+.experience-responsibilities {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.experience-responsibilities li {
+  padding-left: 4px;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.experience-responsibilities li::marker {
+  color: var(--brand-accent);
+}
+
+/* Logros */
+.experience-achievements {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-achievement {
+  min-width: 0;
+  padding-left: 0;
+  border-left: 0;
+}
+
+.experience-achievement-label {
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.experience-achievement-detail {
+  margin: 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet */
+@media (max-width: 1040px) {
+  .experience-card-header,
+  .experience-card-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-position {
+    padding-left: 0;
+  }
+
+  .experience-tenure {
+    grid-column: 2;
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .experience-card-body {
+    grid-template-areas:
+      "company company"
+      "functions functions"
+      "results results";
+  }
+
+  .experience-company {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .experience-company-description {
+    max-width: 65ch;
+  }
+
+  .experience-functions,
+  .experience-results {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-section .section-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 640px) {
+  .experience-section .section-heading h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  .experience-section .section-description {
+    padding-left: 18px;
+    font-size: .88rem;
+  }
+
+  .experience-card {
+    padding: 22px 18px;
+  }
+
+  .experience-card-header,
+  .experience-card-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .experience-brand {
+    width: min(100%, 180px);
+    height: 58px;
+  }
+
+  .experience-position h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-card-body {
+    grid-template-areas:
+      "company"
+      "functions"
+      "results";
+  }
+
+  .experience-tenure {
+    grid-column: auto;
+  }
+
+  .experience-company {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .experience-functions,
+  .experience-results {
+    padding-top: 20px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .experience-block-title {
+    margin-bottom: 14px;
+  }
+
+  .experience-achievements {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

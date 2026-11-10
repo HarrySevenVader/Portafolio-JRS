@@ -86,6 +86,8 @@
 .overline { margin-bottom: 35px; color: var(--muted); }
 
 .home-copy h1 {
+  width: 100%;
+  min-width: 0;
   max-width: 850px;
   margin-bottom: 30px;
   font-family: var(--font-display);
@@ -103,7 +105,7 @@
   color: #151815;
 }
 
-.home-copy h1 em { color: inherit; font-weight: 800; display: block; max-width: 100%; min-width: 0; line-height: 0; }
+.home-copy h1 em { color: inherit; font-weight: 800; display: block; width: 100%; max-width: 100%; min-width: 0; line-height: 1; }
 
 .home-intro {
   max-width: 540px;
@@ -1095,25 +1097,6 @@
 .experience-organization { margin-bottom: 0; color: var(--muted); font-size: .87rem; }
 .experience-description { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
 
-.contact-section { background: var(--paper); }
-.contact-links { border-top: 1px solid var(--line); }
-
-.contact-links a {
-  display: grid;
-  grid-template-columns: minmax(100px, .3fr) minmax(0, 1fr) 26px;
-  gap: 20px;
-  align-items: center;
-  min-height: 86px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-}
-
-.contact-links a > span:first-child { color: var(--muted); font-size: .79rem; }
-.contact-links strong { overflow-wrap: anywhere; font-size: clamp(.95rem, 1.4vw, 1.25rem); font-weight: 550; }
-.contact-links a > span:last-child { font-size: 1.1rem; }
-.contact-links a:hover strong { text-decoration: underline; text-underline-offset: 4px; }
-
 /* Diagramas de proyectos en repositorio. */
 .repository-flow-panel {
   --project-accent: #38bdf8;
@@ -1205,6 +1188,7 @@
 .draw-line-text {
   position: relative;
   display: inline-block;
+  min-width: 0;
   max-width: 100%;
   vertical-align: baseline;
 }
@@ -1212,6 +1196,7 @@
 .draw-line-text__svg {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   overflow: visible;
 }
