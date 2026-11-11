@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { certifications, links, practices, profile } from "../data/portfolio";
-import Portrait from "../styles/assets/e2.jpeg";
+import Portrait from "../styles/assets/jdrs.jpeg";
 import Example from "../Example";
 import { DrawLineText as DrawLineTextTitulos } from "../components/DrawLineText-Titulos";
 import { PracticeIcon } from "../components/PracticeIcon";
